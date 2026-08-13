@@ -1,0 +1,44 @@
+<IfModule mod_authz_core.c>
+    # Managed deny list (auto-generated). Do not edit between the markers below.
+    Require all granted
+    # AUTOBAN-START
+    # AUTOBAN-END
+</IfModule>
+<IfModule !mod_authz_core.c>
+    # Apache 2.2 fallback
+    Order allow,deny
+    Allow from all
+    # AUTOBAN-START
+    # AUTOBAN-END
+</IfModule>
+
+# End of deny list (managed)
+# Redirect 404 Not Found to index
+ErrorDocument 404 /index.html
+
+# Redirect 403 Forbidden to index
+ErrorDocument 403 /index.html
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect .html to extensionless URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# Serve .html file if it exists for extensionless request
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Redirect .php to extensionless URLs (for contact_process.php if needed)
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# Serve .php file if it exists for extensionless request
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
