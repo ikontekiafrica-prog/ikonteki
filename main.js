@@ -1,70 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Global Loader
-  const loader = document.getElementById('global-loader');
+/**
+ * IkonTeki Africa - Lightweight Performance Script
+ * Fast, snappy interactions with zero artificial delays
+ */
 
-  // Mobile Menu Toggle
+// Smart URL cleaner: removes .html extension from browser address bar
+(() => {
+  if (typeof window !== 'undefined' && window.history && window.history.replaceState) {
+    const path = window.location.pathname;
+    if (path.endsWith('.html')) {
+      const cleanPath = path.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+    }
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Navigation Toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const isOpen = navLinks.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       const icon = menuToggle.querySelector('i');
-      if (navLinks.classList.contains('active')) {
-        icon.className = 'fa-solid fa-xmark';
-      } else {
-        icon.className = 'fa-solid fa-bars';
+      if (icon) {
+        icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
       }
     });
 
-    // Close menu when clicking a link
+    // Close mobile menu when an anchor link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuToggle.querySelector('i').className = 'fa-solid fa-bars';
-      });
-    });
-  }
-
-  // Debounce function for performance
-  function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-
-  // Loader on Page Navigation - with debounce for performance
-  const navigationDelay = window.innerWidth <= 768 ? 250 : 400; // Faster on mobile
-  const navigationLoader = debounce((href) => {
-    if (loader) loader.classList.add('active');
-    setTimeout(() => {
-      window.location.href = href;
-    }, navigationDelay);
-  }, 100);
-
-  document.querySelectorAll('a').forEach(link => {
-    if (link.hostname === window.location.hostname && !link.hash && link.target !== '_blank') {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href && href !== '#' && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
-          e.preventDefault();
-          navigationLoader(href);
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          const icon = menuToggle.querySelector('i');
+          if (icon) icon.className = 'fa-solid fa-bars';
         }
       });
-    }
-  });
+    });
 
-  // Loader on Form Submissions
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', () => {
-      if (loader) loader.classList.add('active');
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const icon = menuToggle.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      }
+    });
+  }
+
+  // FAQ Accordion (safaris.html & general)
+  const faqButtons = document.querySelectorAll('.faq-question');
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const currentItem = button.closest('.faq-item');
+      if (currentItem) {
+        const wasActive = currentItem.classList.contains('active');
+        // Close siblings
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        // Toggle current item
+        if (!wasActive) {
+          currentItem.classList.add('active');
+        }
+      }
     });
   });
+
+  // Passive Navbar Scroll Optimization
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
 });
