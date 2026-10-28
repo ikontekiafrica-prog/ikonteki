@@ -1,306 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Portfolio | Live Web & Safari Software Projects | IkonTeki Africa</title>
-  <meta name="description" content="Explore verified live client websites, safari booking portals, and enterprise platforms engineered by IkonTeki Africa in Njiro, Arusha, Tanzania." />
-  <meta name="keywords" content="Portfolio IkonTeki Africa, Software Development Projects Tanzania, Sauti Market, Busteki Project Company, Ikon Safaris, Africa Independent Adventures, Ruttar Adventures, G-Family Adventure, Africa TST" />
-  <link rel="canonical" href="https://ikonteki.co.tz/portfolio" />
-  
-  <meta property="og:title" content="Portfolio | Live Web & Safari Software Projects | IkonTeki Africa" />
-  <meta property="og:description" content="Explore live client platforms, safari booking engines, and SME applications delivered by IkonTeki Africa." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ikonteki.co.tz/portfolio" />
-  <meta property="og:image" content="https://ikonteki.co.tz/images/project-sautimarket-platform.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="images/ikonteki-africa-logo.png" />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Portfolio & Case Studies | IkonTeki Africa</title>
+    <meta name="description" content="Explore enterprise platforms, tourism booking engines, and digital applications engineered by IkonTeki Africa." />
+    <meta name="keywords" content="IkonTeki Africa, Software Solutions Arusha, Cloud Services Tanzania, Web Design, App Development, Custom Chatbots, SEO Tanzania, Digital Marketing, Digital Coaching" />
+    <meta name="author" content="IkonTeki Africa" />
+    <link rel="canonical" href="https://ikonteki.co.tz/portfolio" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Live Projects & Software Portfolio by IkonTeki Africa",
-    "url": "https://ikonteki.co.tz/portfolio",
-    "publisher": {
-      "@type": "Organization",
-      "name": "IkonTeki Africa",
-      "telephone": "+255712286993",
-      "email": "ikontekiafrica@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Njiro",
-        "addressLocality": "Arusha",
-        "addressRegion": "Arusha Region",
-        "addressCountry": "TZ"
-      }
-    }
-  }
-  </script>
-</head>
-<body>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ikonteki.co.tz/portfolio" />
+    <meta property="og:title" content="Client Portfolio & Case Studies | IkonTeki Africa" />
+    <meta property="og:description" content="Explore enterprise platforms, tourism booking engines, and digital applications engineered by IkonTeki Africa." />
+    <meta property="og:image" content="images/ikonteki-hero-growth.jpg" />
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-content">
-      <a href="index.html" class="logo" aria-label="IkonTeki Africa">
-        <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" width="180" height="48" style="height: 48px; width: auto; max-width: 215px; object-fit: contain; display: block; mix-blend-mode: screen;" />
-      </a>
+    <!-- Favicon -->
+    <link rel="icon" href="images/ikonteki-africa-logo.png" />
+    <link rel="apple-touch-icon" href="images/ikonteki-africa-logo.png" />
+
+    <!-- Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body
+    x-data="{ page: 'portfolio', 'darkMode': false, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : false;
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'b eh': darkMode === true}"
+    style="font-family: 'Plus Jakarta Sans', sans-serif;"
+  >
+    
+    <!-- ===== Header Start ===== -->
+    <header
+      class="g s r vd ya cj"
+      :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+      @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+      style="background-color: #0A0F1D !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 99999 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;"
+    >
+      <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+        <div class="vd to/4 tc wf yf">
+          <a href="index.html" class="tc wf xf sf" style="text-decoration: none;">
+            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
+          </a>
+
+          <!-- Hamburger Toggle BTN -->
+          <button class="po rc" @click="navigationOpen = !navigationOpen" aria-label="Toggle Navigation">
+            <span class="rc i pf re pd">
+              <span class="du-block h q vd yc">
+                <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+              </span>
+              <span class="du-block h q vd yc lf">
+                <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+                <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div
+          class="vd wo/4 sd qo f ho oo wf yf"
+          :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
+        >
+          <nav>
+            <ul class="tc _o sf yo cg ep">
+              <li><a href="index.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Home</a></li>
+              <li><a href="services.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Services</a></li>
+              <li><a href="about.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">About Us</a></li>
+              <li><a href="portfolio.html" class="xl" style="color: #00AEEF !important; font-weight: 600;">Portfolio</a></li>
+              <li><a href="contact.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="tc wf ig pb no" style="gap: 16px; align-items: center;">
+            <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+              <label class="rc ab i" title="Toggle Light/Dark Theme" style="cursor: pointer;">
+                <input type="checkbox" :checked="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
+                <svg :class="{ 'wn' : !darkMode, 'xh' : darkMode }" class="th om" width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill="#F5A623"/>
+                </svg>
+                <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+              </label>
+            </div>
+
+            <a href="tel:+255712286993" style="color: #F5A623 !important; font-weight: 700; text-decoration: none; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-phone"></i> +255 712 286 993
+            </a>
+            <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20Africa%2C%20I%20would%20like%20to%20consult%20on%20digital%20services" target="_blank" rel="noopener noreferrer" class="btn-solid-cyan" style="padding: 8px 18px; font-size: 0.88rem; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i> Consult Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Header End ===== -->
+    <main>
       
-      <button class="menu-toggle" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </button>
- 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="teki4impakt.html">TEKI 4 IMPAKT</a></li>
-          <li><a href="safaris.html">Ikon Safaris</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="mobile-only"><a href="contact.html" class="btn btn-brand">Start a Project</a></li>
-        </ul>
-      </nav>
-      <a href="contact.html" class="btn btn-brand"><i class="fa-solid fa-rocket"></i> Start a Project</a>
+  <!-- Page Hero Banner -->
+  <section style="padding: 140px 0 60px; background-color: #0A0F1D; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <div class="bb ze ki xn" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+      <div style="color: #F5A623; font-weight: 700; text-transform: uppercase; font-size: 0.88rem; letter-spacing: 0.06em; margin-bottom: 12px;">
+        PROVEN RESULTS & ARCHITECTURES
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 4.2vw, 3.4rem); font-weight: 800; color: #FFFFFF; line-height: 1.2; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+        Our Client <span style="color: #00AEEF;">Portfolio</span>
+      </h1>
+      <p style="font-size: 1.15rem; color: #94A3B8; line-height: 1.7; max-width: 740px; margin: 0 auto;">
+        Real-world platforms, safari booking engines, and logistics systems built and deployed for leading enterprises across Tanzania.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Page Hero (Solid Dark Blue, Zero Gradients) -->
-    <section class="hero" style="min-height: 42vh; padding: 130px 0 60px; background-color: var(--bg-dark);">
-      <div class="container text-center">
-        <span class="badge-brand" style="margin-bottom: 16px;"><i class="fa-solid fa-laptop-code"></i> Verified Deployments</span>
-        <h1 style="max-width: 900px; margin: 0 auto 18px; font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--text-white);">
-          Selected Projects & Live Client Work
-        </h1>
-        <p style="margin: 0 auto; max-width: 720px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">
-          Verified production platforms, tourism portals, and enterprise software engineered by the IkonTeki Africa team in Njiro, Arusha, Tanzania.
-        </p>
-      </div>
-    </section>
+  <!-- Portfolio Grid -->
+  <section style="padding: 80px 0;">
+    <div class="bb ze ki xn" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 36px;">
 
-    <!-- Projects Grid Section (Strictly: Image + Name + Link) -->
-    <section style="padding: 20px 0 90px; background-color: var(--bg-dark);">
-      <div class="container">
-        <h2 class="visually-hidden">Featured Client Deployments &amp; Production Portals</h2>
-        <div class="project-grid">
+        <!-- Case 1: Sauti Market -->
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="sg">
+          <div style="height: 240px; overflow: hidden;">
+            <img src="images/project-sautimarket-platform.webp" alt="Sauti Market Platform" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 28px;">
+            <div style="color: #00AEEF; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">E-Commerce & Marketplace</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 10px;">Sauti Market Platform</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+              A multi-vendor digital e-commerce marketplace engineered to connect local artisans, vendors, and businesses directly with national and international buyers with seamless mobile payments.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Multi-Vendor</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Payment Gateway</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Cloud Hosting</span>
+            </div>
+          </div>
+        </div>
 
-          <!-- 1: Ikon Safaris -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/ikons-safaris-slider-serengeti.webp" alt="Ikon Safaris Official Platform" width="600" height="380" loading="lazy" decoding="async" />
+        <!-- Case 2: Africa Independent Adventures -->
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="sg">
+          <div style="height: 240px; overflow: hidden;">
+            <img src="images/project-africaindependentadventures.webp" alt="Africa Independent Adventures" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 28px;">
+            <div style="color: #F5A623; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Safari & Tourism Portal</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 10px;">Africa Independent Adventures</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+              High-conversion luxury safari booking portal with customized itinerary builders, live park fee calculation, and dynamic international payment integration.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Tourism Portal</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">SEO Optimization</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Itinerary Engine</span>
             </div>
-            <div class="project-body">
-              <h3>Ikon Safaris</h3>
-              <a href="https://ikonsafaris.com/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
+          </div>
+        </div>
 
-          <!-- 2: Sauti.Market -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/project-sautimarket-platform.webp" alt="Sauti Market Voice Talent Platform" width="600" height="380" loading="lazy" decoding="async" />
+        <!-- Case 3: Busteki Company -->
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="sg">
+          <div style="height: 240px; overflow: hidden;">
+            <img src="images/project-busteki-company.png" alt="Busteki Project Platform" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 28px;">
+            <div style="color: #00AEEF; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Logistics & Transit</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 10px;">Busteki Project Platform</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+              Fleet operations and passenger management platform built to coordinate real-time coach routing, cargo tracking, and electronic ticketing.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Fleet Management</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Automated Dispatch</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">E-Ticketing</span>
             </div>
-            <div class="project-body">
-              <h3>Sauti.Market</h3>
-              <a href="https://sautimarket.busteki.co.tz/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
+          </div>
+        </div>
 
-          <!-- 3: Busteki Project Company -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/project-busteki-company.png" alt="Busteki Project Company" class="contain-fit" width="600" height="380" loading="lazy" decoding="async" />
+        <!-- Case 4: G-Family Adventures -->
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="sg">
+          <div style="height: 240px; overflow: hidden;">
+            <img src="images/project-gfamilyadventures.webp" alt="G-Family Adventures" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 28px;">
+            <div style="color: #F5A623; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Wildlife Expeditions</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 10px;">G-Family Adventures</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+              Custom wildlife safari portal with international Google Ads integration, targeting North American and European expedition seekers.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Tourism UI/UX</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Google Ads</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Mobile Friendly</span>
             </div>
-            <div class="project-body">
-              <h3>Busteki Project Company</h3>
-              <a href="https://busteki.co.tz/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
+          </div>
+        </div>
 
-          <!-- 4: Africa Independent Adventures -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/project-africaindependentadventures.webp" alt="Africa Independent Adventures" class="contain-fit" width="600" height="380" loading="lazy" decoding="async" />
+        <!-- Case 5: Ikon Safaris -->
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="sg">
+          <div style="height: 240px; overflow: hidden;">
+            <img src="images/ikons-safaris-slider-serengeti.webp" alt="Ikon Safaris Platform" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 28px;">
+            <div style="color: #F5A623; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Tourism Flagship</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 10px;">Ikon Safaris Digital Ecosystem</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+              Comprehensive online safari platform featuring high-definition media galleries, itinerary planners, and TripAdvisor trust badges.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Custom Portal</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Cloud Hosting</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Fast Load Speeds</span>
             </div>
-            <div class="project-body">
-              <h3>Africa Independent Adventures</h3>
-              <a href="https://africaindependentadventures.com/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
+          </div>
+        </div>
 
-          <!-- 5: G-Family Adventure Safaris -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/project-gfamilyadventures.webp" alt="G-Family Adventure Safaris" class="contain-fit" width="600" height="380" loading="lazy" decoding="async" />
+        <!-- Case 6: TEKI 4 IMPAKT -->
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="sg">
+          <div style="height: 240px; overflow: hidden;">
+            <img src="images/youth-coding-workshop-arusha-mentorship.jpg" alt="TEKI 4 IMPAKT" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          <div style="padding: 28px;">
+            <div style="color: #10B981; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Social Tech Empowerment</div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: #0F172A; margin-bottom: 10px;">TEKI 4 IMPAKT Labs</h3>
+            <p style="color: #64748B; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+              Digital training and coding workshop infrastructure serving hundreds of young Tanzanians looking to break into technology careers.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Digital Literacy</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Coding Labs</span>
+              <span style="font-size: 0.78rem; background: #F1F5F9; color: #475569; padding: 4px 10px; border-radius: 4px; font-weight: 600;">Mentorship</span>
             </div>
-            <div class="project-body">
-              <h3>G-Family Adventure Safaris</h3>
-              <a href="https://g-familyadventures.com/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- 6: Ruttar Adventures -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/mount-kilimanjaro-summit-trek-tanzania.jpg" alt="Ruttar Adventures Kilimanjaro & Safari" width="600" height="380" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>Ruttar Adventures</h3>
-              <a href="https://ruttaradventures.com/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- 7: Africa Travel Safari & Tours (Africa TST) -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/luxury-tanzania-safari-serengeti-lion.jpg" alt="Africa Travel Safari & Tours" width="600" height="380" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>Africa Travel Safari & Tours</h3>
-              <a href="https://africatst.com/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- 8: IkonTeki Africa Hub -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/modern-tech-hub-arusha-workspace.jpg" alt="IkonTeki Africa Agency Platform" width="600" height="380" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>IkonTeki Africa Hub</h3>
-              <a href="https://ikonteki.co.tz/" target="_blank" rel="noopener noreferrer" class="btn btn-brand" style="width: 100%; text-align: center;">
-                Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- 9: Academic Results Processing SaaS -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/edutech-digital-school-management-system.jpg" alt="Academic Results Processing SaaS" width="600" height="380" loading="lazy" decoding="async" />
-            </div>
-            <div class="project-body">
-              <h3>Academic Results Processing SaaS</h3>
-              <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">
-                Request Demo <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
+          </div>
         </div>
 
       </div>
-    </section>
 
-    <!-- Consultation Hub (Zero Forms) -->
-    <section style="padding: 70px 0 90px; background-color: var(--bg-surface);">
-      <div class="container text-center">
-        <span class="badge-brand" style="margin-bottom: 12px;"><i class="fa-solid fa-headset"></i> Work With Us</span>
-        <h2 class="section-title" style="margin-top: 10px;">Have a Vision for Your Digital Platform?</h2>
-        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px; font-size: 1.05rem;">
-          Connect directly with our engineering team in Njiro, Arusha for project feasibility, architecture design, and timeline estimates.
-        </p>
-        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20team%2C%20I%20would%20like%20to%20discuss%20a%20new%20project." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-          </a>
-          <a href="mailto:ikontekiafrica@gmail.com" class="btn btn-outline">
-            <i class="fa-solid fa-envelope"></i> ikontekiafrica@gmail.com
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div>
-          <a href="index.html" class="logo" style="margin-bottom: 16px;" aria-label="IkonTeki Africa">
-            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" width="160" height="42" style="height: 42px; width: auto; max-width: 195px; object-fit: contain; display: block; mix-blend-mode: screen;" />
-          </a>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 12px;">
-            Youth-led technology hub delivering enterprise web applications, cloud hosting, and tourism digital infrastructure across East Africa.
-          </p>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Solutions</h4>
-          <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="services.html" style="color: var(--text-muted);">Custom Software Engineering</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">Cloud Hosting & Infrastructure</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">Institutional Data Management</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">EduTech Platforms</a></li>
-            <li><a href="safaris.html" style="color: var(--text-muted);">Tourism & Safari Portals</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Navigation</h4>
-          <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="about.html" style="color: var(--text-muted);">About Us</a></li>
-            <li><a href="portfolio.html" style="color: var(--text-muted);">Portfolio</a></li>
-            <li><a href="teki4impakt.html" style="color: var(--text-muted);">TEKI 4 IMPAKT</a></li>
-            <li><a href="safaris.html" style="color: var(--text-muted);">Ikon Safaris</a></li>
-            <li><a href="contact.html" style="color: var(--text-muted);">Contact Desk</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Direct Contact</h4>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
-            <i class="fa-solid fa-phone" style="color: var(--brand-blue); margin-right: 8px;"></i> +255 712 286 993
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
-            <i class="fa-solid fa-envelope" style="color: var(--brand-blue); margin-right: 8px;"></i> ikontekiafrica@gmail.com
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 14px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--brand-blue); margin-right: 8px;"></i> Njiro, Arusha, Tanzania
-          </p>
-          <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20team" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 9px 16px; font-size: 0.85rem;">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 IkonTeki Africa. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/ikonteki-africa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.facebook.com/ikontekiafrica" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/ikontekiafrica/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="contact.html" class="btn-solid-cyan"><i class="fa-solid fa-rocket"></i> Launch Your Project With Us</a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="main.js"></script>
-</body>
+    </main>
+    
+    <!-- ===== Footer Start ===== -->
+    <footer style="background-color: #070B14 !important; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 60px;">
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div class="ji gp" style="padding-bottom: 40px;">
+          <div class="tc uf ap gg fp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+            <div class="animate_top">
+              <a href="index.html" style="display: inline-block; margin-bottom: 14px;">
+                <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
+              </a>
+              <p style="color: #94a3b8; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+                IkonTeki Africa curates high-performance digital services designed to accelerate your brand's market growth.
+              </p>
+              <div style="font-size: 0.88rem; color: #F5A623; font-weight: 700;">
+                YOU OWN IT • WE BRAND IT
+              </div>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Core Capabilities</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Software Solutions</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Cloud Services</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Digital Marketing & Ads</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Digital Coaching & Classes</a></li>
+              </ul>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Quick Navigation</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Home</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Services</a></li>
+                <li><a href="about.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">About Us</a></li>
+                <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Portfolio</a></li>
+                <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Contact Us Today</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; color: #94a3b8; font-size: 0.9rem;">
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-phone" style="color: #00AEEF;"></i> <a href="tel:+255712286993" style="color: #e2e8f0; text-decoration: none;">+255 712 286 993</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-envelope" style="color: #F5A623;"></i> <a href="mailto:ikontekiafrica@gmail.com" style="color: #e2e8f0; text-decoration: none;">ikontekiafrica@gmail.com</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-globe" style="color: #00AEEF;"></i> <a href="https://www.ikonteki.co.tz" style="color: #e2e8f0; text-decoration: none;">www.ikonteki.co.tz</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-location-dot" style="color: #10B981;"></i> <span>Njiro, Arusha, Tanzania</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <p style="color: #79808a; font-size: 0.88rem; margin: 0;">
+            &copy; 2026 IkonTeki Africa. All rights reserved. The Reason For Your Brand.
+          </p>
+          <div style="display: flex; gap: 14px;">
+            <a href="https://instagram.com/ikontekiafrica" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/ikontekiafrica" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/255712286993" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ===== Footer End ===== -->
+    
+    <script defer src="bundle.js"></script>
+  </body>
 </html>

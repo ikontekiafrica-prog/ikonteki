@@ -1,396 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Tech Services & Custom Software Development Arusha | IkonTeki Africa</title>
-  <meta name="description" content="Explore custom software development, cloud hosting, data management, and tourism portal engineering from IkonTeki Africa in Njiro, Arusha. Request a quote." />
-  <meta name="keywords" content="Enterprise Software Development Tanzania, Cloud Hosting Arusha, Custom Web Apps Tanzania, EduTech Systems Arusha, Tourism Safari Portal Developer, IkonTeki Africa Services" />
-  <link rel="canonical" href="https://ikonteki.co.tz/services" />
-  
-  <meta property="og:title" content="Tech Services & Custom Software | IkonTeki Africa" />
-  <meta property="og:description" content="Custom software engineering, cloud hosting, data architectures, and tourism tech systems in Arusha, Tanzania." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ikonteki.co.tz/services" />
-  <meta property="og:image" content="https://ikonteki.co.tz/images/cloud-data-management-analytics-tanzania.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="images/ikonteki-africa-logo.png" />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | Software, Cloud, Marketing & Coaching | IkonTeki Africa</title>
+    <meta name="description" content="Explore IkonTeki Africa's 4 pillars: Software Solutions, Cloud Services, Digital Marketing, and Digital Coaching in Arusha, Tanzania." />
+    <meta name="keywords" content="IkonTeki Africa, Software Solutions Arusha, Cloud Services Tanzania, Web Design, App Development, Custom Chatbots, SEO Tanzania, Digital Marketing, Digital Coaching" />
+    <meta name="author" content="IkonTeki Africa" />
+    <link rel="canonical" href="https://ikonteki.co.tz/services" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Custom Software, Cloud Hosting & Tourism Tech Services",
-    "url": "https://ikonteki.co.tz/services",
-    "serviceType": "Custom Software Development, Cloud Hosting & Tourism Tech",
-    "provider": {
-      "@type": "Organization",
-      "name": "IkonTeki Africa",
-      "telephone": "+255712286993",
-      "email": "ikontekiafrica@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Njiro",
-        "addressLocality": "Arusha",
-        "addressRegion": "Arusha Region",
-        "addressCountry": "TZ"
-      }
-    }
-  }
-  </script>
-</head>
-<body>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ikonteki.co.tz/services" />
+    <meta property="og:title" content="Our Services | Software, Cloud, Marketing & Coaching | IkonTeki Africa" />
+    <meta property="og:description" content="Explore IkonTeki Africa's 4 pillars: Software Solutions, Cloud Services, Digital Marketing, and Digital Coaching in Arusha, Tanzania." />
+    <meta property="og:image" content="images/ikonteki-hero-growth.jpg" />
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-content">
-      <a href="index.html" class="logo" aria-label="IkonTeki Africa">
-        <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" width="180" height="48" style="height: 48px; width: auto; max-width: 215px; object-fit: contain; display: block; mix-blend-mode: screen;" />
-      </a>
+    <!-- Favicon -->
+    <link rel="icon" href="images/ikonteki-africa-logo.png" />
+    <link rel="apple-touch-icon" href="images/ikonteki-africa-logo.png" />
+
+    <!-- Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body
+    x-data="{ page: 'services', 'darkMode': false, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : false;
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'b eh': darkMode === true}"
+    style="font-family: 'Plus Jakarta Sans', sans-serif;"
+  >
+    
+    <!-- ===== Header Start ===== -->
+    <header
+      class="g s r vd ya cj"
+      :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+      @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+      style="background-color: #0A0F1D !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 99999 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;"
+    >
+      <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+        <div class="vd to/4 tc wf yf">
+          <a href="index.html" class="tc wf xf sf" style="text-decoration: none;">
+            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
+          </a>
+
+          <!-- Hamburger Toggle BTN -->
+          <button class="po rc" @click="navigationOpen = !navigationOpen" aria-label="Toggle Navigation">
+            <span class="rc i pf re pd">
+              <span class="du-block h q vd yc">
+                <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+              </span>
+              <span class="du-block h q vd yc lf">
+                <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+                <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div
+          class="vd wo/4 sd qo f ho oo wf yf"
+          :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
+        >
+          <nav>
+            <ul class="tc _o sf yo cg ep">
+              <li><a href="index.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Home</a></li>
+              <li><a href="services.html" class="xl" style="color: #00AEEF !important; font-weight: 600;">Services</a></li>
+              <li><a href="about.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">About Us</a></li>
+              <li><a href="portfolio.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Portfolio</a></li>
+              <li><a href="contact.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="tc wf ig pb no" style="gap: 16px; align-items: center;">
+            <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+              <label class="rc ab i" title="Toggle Light/Dark Theme" style="cursor: pointer;">
+                <input type="checkbox" :checked="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
+                <svg :class="{ 'wn' : !darkMode, 'xh' : darkMode }" class="th om" width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill="#F5A623"/>
+                </svg>
+                <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+              </label>
+            </div>
+
+            <a href="tel:+255712286993" style="color: #F5A623 !important; font-weight: 700; text-decoration: none; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-phone"></i> +255 712 286 993
+            </a>
+            <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20Africa%2C%20I%20would%20like%20to%20consult%20on%20digital%20services" target="_blank" rel="noopener noreferrer" class="btn-solid-cyan" style="padding: 8px 18px; font-size: 0.88rem; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i> Consult Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Header End ===== -->
+    <main>
       
-      <button class="menu-toggle" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </button>
-
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="teki4impakt.html">TEKI 4 IMPAKT</a></li>
-          <li><a href="safaris.html">Ikon Safaris</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="mobile-only"><a href="contact.html" class="btn btn-brand">Start a Project</a></li>
-        </ul>
-      </nav>
-      <a href="contact.html" class="btn btn-brand"><i class="fa-solid fa-rocket"></i> Start a Project</a>
+  <!-- Page Hero Banner -->
+  <section style="padding: 140px 0 60px; background-color: #0A0F1D; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <div class="bb ze ki xn" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+      <div style="color: #F5A623; font-weight: 700; text-transform: uppercase; font-size: 0.88rem; letter-spacing: 0.06em; margin-bottom: 12px;">
+        ENGINEERED FOR MARKET DOMINANCE
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 4.2vw, 3.4rem); font-weight: 800; color: #FFFFFF; line-height: 1.2; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+        Curated Services Designed for <span style="color: #00AEEF;">Your Market Growth</span>
+      </h1>
+      <p style="font-size: 1.15rem; color: #94A3B8; line-height: 1.7; max-width: 740px; margin: 0 auto;">
+        Directly from our core business framework: four dedicated pillars engineered to eliminate operational bottlenecks, accelerate brand visibility, and scale revenue.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Page Hero (Solid Dark Blue, Zero Gradients) -->
-    <section class="hero" style="min-height: 42vh; padding: 130px 0 60px; background-color: var(--bg-dark);">
-      <div class="container text-center">
-        <span class="badge-brand" style="margin-bottom: 16px;"><i class="fa-solid fa-layer-group"></i> Enterprise Technology Portfolio</span>
-        <h1 style="max-width: 900px; margin: 0 auto 18px; font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--text-white);">
-          High-Performance Software, Cloud & Systems
-        </h1>
-        <p style="margin: 0 auto 30px; max-width: 750px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">
-          From custom web applications and dedicated cloud hosting to institutional data architectures and high-converting safari tourism portals.
-        </p>
-        <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-          <a href="#services-list" class="btn btn-brand">Explore Capabilities</a>
-          <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20team%2C%20I%20am%20inquiring%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry</a>
+  <!-- The 4 Pillars Deep Dive -->
+  <section style="padding: 80px 0;">
+    <div class="bb ze ki xn" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      
+      <!-- Pillar 1: Software Solutions -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; margin-bottom: 90px; padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;" class="sg">
+        <div style="flex: 1; min-width: 300px; max-width: 580px;">
+          <div style="display: inline-block; padding: 6px 14px; border-radius: 6px; background: rgba(0, 174, 239, 0.1); color: #00AEEF; font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;">
+            PILLAR 01
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+            Software Solutions
+          </h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+            We engineer bespoke software architectures tailored to eliminate manual bottlenecks, provide delightful client experiences, and automate your day-to-day operations.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px;">
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-code" style="color: #00AEEF; margin-right: 6px;"></i> Web Design & Apps</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">High-converting responsive websites, PWAs, and client booking portals.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-mobile-screen" style="color: #00AEEF; margin-right: 6px;"></i> App Development</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Native and cross-platform mobile applications for iOS & Android devices.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-robot" style="color: #00AEEF; margin-right: 6px;"></i> Custom Chatbots</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Intelligent WhatsApp and website bots for 24/7 automated sales and support.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-gears" style="color: #00AEEF; margin-right: 6px;"></i> Automations</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Automated invoicing, customer routing, and database synchronization pipelines.</p>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn-solid-cyan"><i class="fa-solid fa-paper-plane"></i> Request Software Consultation</a>
+        </div>
+        <div style="flex: 1; min-width: 300px; max-width: 500px;">
+          <img src="images/enterprise-software-development-engineers.jpg" alt="Software Solutions" style="width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" />
         </div>
       </div>
-    </section>
 
-    <!-- Services Grid Detailed -->
-    <section id="services-list" style="padding-top: 30px; background-color: var(--bg-dark);">
-      <div class="container">
-        <h2 class="visually-hidden">Core Technical Capabilities &amp; Cloud Infrastructure</h2>
-        <div class="vip-grid">
-          
-          <!-- Service 1: Custom Software -->
-          <article class="vip-card">
-            <div class="vip-card-media">
-              <img src="images/enterprise-software-development-engineers.jpg" alt="Custom Enterprise Software Development in Tanzania" width="600" height="380" loading="lazy" decoding="async" />
-              <div class="vip-card-overlay">
-                <span class="vip-card-tag">Bespoke Engineering</span>
-              </div>
-            </div>
-            <div class="vip-card-body">
-              <h3>Bespoke Enterprise Software & Web Apps</h3>
-              <p>We architect scalable web and mobile software tailored to your company's proprietary operational workflows, eliminating operational friction.</p>
-              <ul class="vip-features-list">
-                <li><i class="fa-solid fa-check"></i><span>Modern JavaScript, Python & Cloud stacks</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Secure REST & GraphQL API integrations</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Automated workflows, billing & user dashboards</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Full IP transfer & clean maintainable code</span></li>
-              </ul>
-              <div class="vip-card-footer">
-                <a href="https://wa.me/255712286993?text=Hello%2C%20I%20am%20interested%20in%20Custom%20Software%20Development." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">Inquire via WhatsApp</a>
-              </div>
-            </div>
-          </article>
+      <!-- Pillar 2: Cloud Services -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; margin-bottom: 90px; padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;" class="sg">
+        <div style="flex: 1; min-width: 300px; max-width: 500px; order: 2;">
+          <img src="images/cloud-data-management-analytics-tanzania.jpg" alt="Cloud Services" style="width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" />
+        </div>
+        <div style="flex: 1; min-width: 300px; max-width: 580px; order: 1;">
+          <div style="display: inline-block; padding: 6px 14px; border-radius: 6px; background: rgba(0, 174, 239, 0.1); color: #00AEEF; font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;">
+            PILLAR 02
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+            Cloud Services
+          </h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+            Reliable, secure server infrastructure engineered for zero downtime, fast international load speeds, and impenetrable data safety.
+          </p>
 
-          <!-- Service 2: Cloud Hosting & Managed Infrastructure (USER REQUEST ADDITION) -->
-          <article class="vip-card">
-            <div class="vip-card-media">
-              <img src="images/modern-tech-hub-arusha-workspace.jpg" alt="Cloud Hosting and Managed Server Infrastructure Tanzania" width="600" height="380" loading="lazy" decoding="async" />
-              <div class="vip-card-overlay">
-                <span class="vip-card-tag">Cloud & Servers</span>
-              </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px;">
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-server" style="color: #00AEEF; margin-right: 6px;"></i> Web Hosting</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">NVMe high-speed server infrastructure with 99.9% uptime guarantee.</p>
             </div>
-            <div class="vip-card-body">
-              <h3>Cloud Hosting & Managed Infrastructure</h3>
-              <p>High-reliability, secure cloud hosting engineered for East African businesses and international portals with guaranteed high availability.</p>
-              <ul class="vip-features-list">
-                <li><i class="fa-solid fa-check"></i><span>High-performance NVMe cloud VPS & dedicated hosting</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Automated daily backups & disaster recovery</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Free SSL certificates, domain management & DDoS protection</span></li>
-                <li><i class="fa-solid fa-check"></i><span>99.9% uptime SLA with 24/7 technical monitoring</span></li>
-              </ul>
-              <div class="vip-card-footer">
-                <a href="https://wa.me/255712286993?text=Hello%2C%20I%20am%20interested%20in%20Cloud%20Hosting%20Services." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">Inquire via WhatsApp</a>
-              </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-envelope" style="color: #00AEEF; margin-right: 6px;"></i> Professional Emails</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Custom corporate domain emails (name@yourbrand.co.tz) with anti-spam security.</p>
             </div>
-          </article>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-database" style="color: #00AEEF; margin-right: 6px;"></i> Data Backup</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Automated daily offsite snapshots and one-click disaster recovery.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-lock" style="color: #00AEEF; margin-right: 6px;"></i> SSL & Cyber Security</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">End-to-end encryption, firewall defense, and DDoS protection.</p>
+            </div>
+          </div>
 
-          <!-- Service 3: Institutional Data Management -->
-          <article class="vip-card">
-            <div class="vip-card-media">
-              <img src="images/cloud-data-management-analytics-tanzania.jpg" alt="Institutional Data Architecture and Relational Cloud Systems" width="600" height="380" loading="lazy" decoding="async" />
-              <div class="vip-card-overlay">
-                <span class="vip-card-tag">Data Architecture</span>
-              </div>
-            </div>
-            <div class="vip-card-body">
-              <h3>Institutional Data Management & Relational Systems</h3>
-              <p>We convert cumbersome legacy paperwork and scattered spreadsheets into high-performance, encrypted cloud relational databases.</p>
-              <ul class="vip-features-list">
-                <li><i class="fa-solid fa-check"></i><span>PostgreSQL & MySQL centralized database design</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Automated multi-region backups & failover</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Granular role-based permissions & audit trails</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Interactive executive KPI analytics dashboards</span></li>
-              </ul>
-              <div class="vip-card-footer">
-                <a href="https://wa.me/255712286993?text=Hello%2C%20I%20am%20interested%20in%20Institutional%20Data%20Management." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">Inquire via WhatsApp</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 4: EduTech Systems -->
-          <article class="vip-card">
-            <div class="vip-card-media">
-              <img src="images/edutech-digital-school-management-system.jpg" alt="EduTech School Management Systems Arusha Tanzania" width="600" height="380" loading="lazy" decoding="async" />
-              <div class="vip-card-overlay">
-                <span class="vip-card-tag">Education Technology</span>
-              </div>
-            </div>
-            <div class="vip-card-body">
-              <h3>EduTech & School Administration Platforms</h3>
-              <p>Specialized institutional platforms that automate student admissions, grade recording, digital report cards, and fee reconciliation.</p>
-              <ul class="vip-features-list">
-                <li><i class="fa-solid fa-check"></i><span>Student & faculty record management</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Automated parent SMS notifications for fees</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Instant exam grading & report generation</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Mobile-friendly student and parent portals</span></li>
-              </ul>
-              <div class="vip-card-footer">
-                <a href="https://wa.me/255712286993?text=Hello%2C%20I%20am%20interested%20in%20EduTech%20Systems." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">Inquire via WhatsApp</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 5: Ikon Safaris Tourism Tech -->
-          <article class="vip-card">
-            <div class="vip-card-media">
-              <img src="images/ikons-safaris-slider-serengeti.webp" alt="Ikon Safaris Luxury Wildlife Packages Tanzania ikonsafaris.com" width="600" height="380" loading="lazy" decoding="async" />
-              <div class="vip-card-overlay">
-                <span class="vip-card-tag">Tourism Tech</span>
-              </div>
-            </div>
-            <div class="vip-card-body">
-              <h3>Ikon Safaris &bull; ikonsafaris.com</h3>
-              <p>Our premier luxury safari brand offering curated wildlife safaris, Serengeti Great Migration expeditions, and private lodge journeys in Tanzania.</p>
-              <ul class="vip-features-list">
-                <li><i class="fa-solid fa-check"></i><span>Private 4x4 Land Cruisers with pop-top roof</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Licensed local naturalist guides</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Serengeti, Ngorongoro, Tarangire & Zanzibar</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Direct VIP booking via ikonsafaris.com</span></li>
-              </ul>
-              <div class="vip-card-footer">
-                <a href="safaris.html" class="btn btn-brand" style="width: 100%; text-align: center;"><i class="fa-solid fa-compass"></i> Explore Ikon Safaris</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Service 6: Digital Marketing & SEO -->
-          <article class="vip-card">
-            <div class="vip-card-media">
-              <img src="images/digital-marketing-seo-growth-agency.jpg" alt="Digital Marketing and Customer Acquisition SEO Arusha" width="600" height="380" loading="lazy" decoding="async" />
-              <div class="vip-card-overlay">
-                <span class="vip-card-tag">Growth Engineering</span>
-              </div>
-            </div>
-            <div class="vip-card-body">
-              <h3>Digital Marketing, SEO & Customer Acquisition</h3>
-              <p>We optimize company websites to generate real paying customers rather than empty visits, combining technical on-page SEO with high-converting copywriting.</p>
-              <ul class="vip-features-list">
-                <li><i class="fa-solid fa-check"></i><span>High-intent buyer keyword optimization</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Google Search Console & Schema markup setup</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Mobile PageSpeed and Core Web Vitals boosting</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Conversion rate optimization (CRO) UI redesign</span></li>
-              </ul>
-              <div class="vip-card-footer">
-                <a href="https://wa.me/255712286993?text=Hello%2C%20I%20am%20interested%20in%20SEO%20and%20Digital%20Marketing." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">Inquire via WhatsApp</a>
-              </div>
-            </div>
-          </article>
-
+          <a href="contact.html" class="btn-solid-cyan"><i class="fa-solid fa-cloud"></i> Deploy Cloud Setup</a>
         </div>
       </div>
-    </section>
 
-    <!-- Development Process (Solid Dark Blue) -->
-    <section style="background-color: var(--bg-surface); padding: 85px 0;">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-brand"><i class="fa-solid fa-diagram-project"></i> How We Deliver</span>
-          <h2 class="section-title">Our Transparent 4-Step Engineering Process</h2>
-          <p class="section-desc">We follow a disciplined, milestone-driven framework that guarantees deliverables on time and on budget.</p>
+      <!-- Pillar 3: Digital Marketing -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; margin-bottom: 90px; padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;" class="sg">
+        <div style="flex: 1; min-width: 300px; max-width: 580px;">
+          <div style="display: inline-block; padding: 6px 14px; border-radius: 6px; background: rgba(245, 166, 35, 0.1); color: #F5A623; font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;">
+            PILLAR 03
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+            Digital Marketing
+          </h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+            Data-backed client acquisition campaigns that turn brand visibility into qualified leads and verifiable commercial growth.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px;">
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-magnifying-glass" style="color: #F5A623; margin-right: 6px;"></i> SEO Optimization</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Organic search ranking across Google for high-intent customer search queries.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-share-nodes" style="color: #F5A623; margin-right: 6px;"></i> SMO Strategy</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Social Media Optimization across Instagram, Facebook, TikTok, and LinkedIn.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-bullseye" style="color: #F5A623; margin-right: 6px;"></i> Google & Meta Ads</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Laser-targeted paid ads engineered for maximum ROI and lead capture.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-palette" style="color: #F5A623; margin-right: 6px;"></i> Design & Branding</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Memorable visual identity, logos, corporate guidelines, and UX design.</p>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn-solid-gold"><i class="fa-solid fa-chart-line"></i> Scale Your Marketing</a>
         </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-          
-          <div class="service-card" style="border-top: 3px solid var(--brand-blue);">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--brand-blue); margin-bottom: 10px;">01</div>
-            <h3>Discovery &amp; System Architecture</h3>
-            <p>We audit your existing operations, map database schemas, and formulate a clear technical specification document.</p>
-          </div>
-
-          <div class="service-card" style="border-top: 3px solid var(--brand-blue);">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--brand-blue); margin-bottom: 10px;">02</div>
-            <h3>Agile Development Sprints</h3>
-            <p>We build production-ready modules with regular review milestones, ensuring rapid progress and complete transparency.</p>
-          </div>
-
-          <div class="service-card" style="border-top: 3px solid var(--brand-blue);">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--brand-blue); margin-bottom: 10px;">03</div>
-            <h3>Quality Assurance &amp; Speed Tuning</h3>
-            <p>Rigorous mobile responsiveness testing, multi-browser validation, and database query optimization for sub-second responses.</p>
-          </div>
-
-          <div class="service-card" style="border-top: 3px solid var(--brand-blue);">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--brand-blue); margin-bottom: 10px;">04</div>
-            <h3>Deployment &amp; Support</h3>
-            <p>Live production rollout on secure cloud servers, staff training workshops, and ongoing technical maintenance.</p>
-          </div>
-
+        <div style="flex: 1; min-width: 300px; max-width: 500px;">
+          <img src="images/digital-marketing-seo-growth-agency.jpg" alt="Digital Marketing" style="width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" />
         </div>
       </div>
-    </section>
 
-    <!-- Direct VIP Concierge Hub (Zero Broken Forms) -->
-    <section id="contact" style="padding: 90px 0; background-color: var(--bg-dark);">
-      <div class="container">
-        <div class="concierge-hub">
-          <div class="text-center">
-            <span class="badge-brand"><i class="fa-solid fa-headset"></i> Direct Engagement</span>
-            <h2 class="section-title" style="margin-top: 10px;">Commission a Solution with Our Engineering Team</h2>
-            <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto; font-size: 1.05rem;">
-              Skip generic web forms. Reach out directly to discuss your software, cloud hosting, or digital platform requirements.
-            </p>
+      <!-- Pillar 4: Digital Coaching -->
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; background: #FFFFFF;" class="sg">
+        <div style="flex: 1; min-width: 300px; max-width: 500px; order: 2;">
+          <img src="images/digital-career-coaching.jpg" alt="Digital Coaching" style="width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" />
+        </div>
+        <div style="flex: 1; min-width: 300px; max-width: 580px; order: 1;">
+          <div style="display: inline-block; padding: 6px 14px; border-radius: 6px; background: rgba(245, 166, 35, 0.1); color: #F5A623; font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;">
+            PILLAR 04
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+            Digital Coaching
+          </h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+            Practical, hands-on mentorship programs designed to cultivate world-class developers, digital professionals, and tech-empowered corporate teams.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 28px;">
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-compass" style="color: #F5A623; margin-right: 6px;"></i> Career Coaching</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">1-on-1 guidance for aspiring tech professionals, remote job seekers, and entrepreneurs.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-terminal" style="color: #F5A623; margin-right: 6px;"></i> Programming Classes</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Intensive coding bootcamps in Web Development, Python, JavaScript, and APIs.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-desktop" style="color: #F5A623; margin-right: 6px;"></i> Computer Applications</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Mastery of essential business software, data entry, digital spreadsheets, and tools.</p>
+            </div>
+            <div style="padding: 14px; border-radius: 10px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #0F172A; margin-bottom: 4px;"><i class="fa-solid fa-building" style="color: #F5A623; margin-right: 6px;"></i> Corporate Upskilling</h4>
+              <p style="font-size: 0.88rem; color: #64748B;">Tailored staff training to digitize internal workflows and boost office productivity.</p>
+            </div>
           </div>
 
-          <div class="concierge-channels">
-            <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20team%2C%20I%20would%20like%20to%20request%20a%20service%20quote." target="_blank" rel="noopener noreferrer" class="concierge-card whatsapp">
-              <i class="fa-brands fa-whatsapp"></i>
-              <strong>Direct WhatsApp</strong>
-              <span>Fastest response &bull; +255 712 286 993</span>
-            </a>
-
-            <a href="tel:+255712286993" class="concierge-card phone">
-              <i class="fa-solid fa-phone-volume"></i>
-              <strong>Telephone Direct</strong>
-              <span>Speak to Technical Team</span>
-            </a>
-
-            <a href="mailto:ikontekiafrica@gmail.com" class="concierge-card email">
-              <i class="fa-solid fa-envelope-open-text"></i>
-              <strong>Direct Email</strong>
-              <span>ikontekiafrica@gmail.com</span>
-            </a>
-          </div>
-
-          <div style="margin-top: 32px; padding: 18px; background-color: var(--bg-surface-elevated); border-radius: var(--radius-md); border: 1px solid var(--border-subtle); text-align: center;">
-            <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 4px;">
-              <i class="fa-solid fa-location-dot" style="color: var(--brand-accent); margin-right: 8px;"></i>
-              <strong>Office Location:</strong> Njiro, Arusha, Tanzania
-            </p>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">
-              Direct consultations available in person in Arusha or virtually via Google Meet / WhatsApp.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div>
-          <a href="index.html" class="logo" style="margin-bottom: 16px;" aria-label="IkonTeki Africa">
-            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" width="160" height="42" style="height: 42px; width: auto; max-width: 195px; object-fit: contain; display: block; mix-blend-mode: screen;" />
-          </a>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 12px;">
-            Youth-led technology hub delivering enterprise web applications, cloud hosting, and tourism digital infrastructure across East Africa.
-          </p>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Solutions</h4>
-          <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="services.html" style="color: var(--text-muted);">Custom Software Engineering</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">Cloud Hosting & Infrastructure</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">Institutional Data Systems</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">EduTech Platforms</a></li>
-            <li><a href="safaris.html" style="color: var(--text-muted);">Tourism & Safari Portals</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Navigation</h4>
-          <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="about.html" style="color: var(--text-muted);">About Us</a></li>
-            <li><a href="portfolio.html" style="color: var(--text-muted);">Portfolio</a></li>
-            <li><a href="teki4impakt.html" style="color: var(--text-muted);">TEKI 4 IMPAKT</a></li>
-            <li><a href="safaris.html" style="color: var(--text-muted);">Ikon Safaris</a></li>
-            <li><a href="contact.html" style="color: var(--text-muted);">Contact Desk</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Direct Contact</h4>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
-            <i class="fa-solid fa-phone" style="color: var(--brand-blue); margin-right: 8px;"></i> +255 712 286 993
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
-            <i class="fa-solid fa-envelope" style="color: var(--brand-blue); margin-right: 8px;"></i> ikontekiafrica@gmail.com
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 14px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--brand-blue); margin-right: 8px;"></i> Njiro, Arusha, Tanzania
-          </p>
-          <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20team" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 9px 16px; font-size: 0.85rem;">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
+          <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%2C%20I%20am%20interested%20in%20Digital%20Coaching%20classes." target="_blank" rel="noopener noreferrer" class="btn-solid-gold">
+            <i class="fa-solid fa-graduation-cap"></i> Enroll in Coaching Classes
           </a>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 IkonTeki Africa. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/ikonteki-africa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.facebook.com/ikontekiafrica" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/ikontekiafrica/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section style="background-color: #00AEEF; padding: 60px 0; text-align: center;">
+    <div class="bb ze ki xn" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+      <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin-bottom: 14px; font-family: 'Outfit', sans-serif;">
+        Ready to Build Your Digital Advantage?
+      </h2>
+      <p style="color: rgba(255, 255, 255, 0.95); font-size: 1.1rem; margin-bottom: 24px;">
+        Speak directly with our technical team in Arusha to review your project scope and launch roadmap.
+      </p>
+      <a href="contact.html" style="display: inline-flex; align-items: center; gap: 8px; background: #0A0F1D; color: #FFFFFF; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none;">
+        <i class="fa-solid fa-paper-plane"></i> Contact Our Engineers Today
+      </a>
+    </div>
+  </section>
+
+    </main>
+    
+    <!-- ===== Footer Start ===== -->
+    <footer style="background-color: #070B14 !important; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 60px;">
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div class="ji gp" style="padding-bottom: 40px;">
+          <div class="tc uf ap gg fp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+            <div class="animate_top">
+              <a href="index.html" style="display: inline-block; margin-bottom: 14px;">
+                <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
+              </a>
+              <p style="color: #94a3b8; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+                IkonTeki Africa curates high-performance digital services designed to accelerate your brand's market growth.
+              </p>
+              <div style="font-size: 0.88rem; color: #F5A623; font-weight: 700;">
+                YOU OWN IT • WE BRAND IT
+              </div>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Core Capabilities</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Software Solutions</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Cloud Services</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Digital Marketing & Ads</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Digital Coaching & Classes</a></li>
+              </ul>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Quick Navigation</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Home</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Services</a></li>
+                <li><a href="about.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">About Us</a></li>
+                <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Portfolio</a></li>
+                <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Contact Us Today</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; color: #94a3b8; font-size: 0.9rem;">
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-phone" style="color: #00AEEF;"></i> <a href="tel:+255712286993" style="color: #e2e8f0; text-decoration: none;">+255 712 286 993</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-envelope" style="color: #F5A623;"></i> <a href="mailto:ikontekiafrica@gmail.com" style="color: #e2e8f0; text-decoration: none;">ikontekiafrica@gmail.com</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-globe" style="color: #00AEEF;"></i> <a href="https://www.ikonteki.co.tz" style="color: #e2e8f0; text-decoration: none;">www.ikonteki.co.tz</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-location-dot" style="color: #10B981;"></i> <span>Njiro, Arusha, Tanzania</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <p style="color: #79808a; font-size: 0.88rem; margin: 0;">
+            &copy; 2026 IkonTeki Africa. All rights reserved. The Reason For Your Brand.
+          </p>
+          <div style="display: flex; gap: 14px;">
+            <a href="https://instagram.com/ikontekiafrica" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/ikontekiafrica" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/255712286993" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
+    </footer>
+    <!-- ===== Footer End ===== -->
+    
+    <script defer src="bundle.js"></script>
+  </body>
 </html>

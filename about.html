@@ -1,301 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>About Us | Tech Hub & Software Engineers Arusha | IkonTeki Africa</title>
-  <meta name="description" content="Discover the story and leadership behind IkonTeki Africa in Njiro, Arusha. We engineer custom software and empower East African youth through TEKI 4 IMPAKT." />
-  <meta name="keywords" content="About IkonTeki Africa, Tech Hub Arusha, Software Developers Tanzania, Vedius Vedasto, TEKI 4 IMPAKT, Software Company Njiro Arusha, Sauti Market developer" />
-  <link rel="canonical" href="https://ikonteki.co.tz/about" />
-  
-  <meta property="og:title" content="About IkonTeki Africa | Youth-Led Tech Hub Arusha, Tanzania" />
-  <meta property="og:description" content="Engineering high-performance software, cloud systems, and tourism portals while empowering local youth in Arusha, Tanzania." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ikonteki.co.tz/about" />
-  <meta property="og:image" content="https://ikonteki.co.tz/images/founder-vedius-vedasto-ikonteki.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="images/ikonteki-africa-logo.png" />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Tech Agency & Youth Empowerment Arusha | IkonTeki Africa</title>
+    <meta name="description" content="Discover IkonTeki Africa headquartered in Njiro, Arusha. You Own It, We Brand It. Discover our mission, engineering philosophy, and community impact." />
+    <meta name="keywords" content="IkonTeki Africa, Software Solutions Arusha, Cloud Services Tanzania, Web Design, App Development, Custom Chatbots, SEO Tanzania, Digital Marketing, Digital Coaching" />
+    <meta name="author" content="IkonTeki Africa" />
+    <link rel="canonical" href="https://ikonteki.co.tz/about" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About IkonTeki Africa",
-    "url": "https://ikonteki.co.tz/about",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "IkonTeki Africa",
-      "telephone": "+255712286993",
-      "email": "ikontekiafrica@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Njiro",
-        "addressLocality": "Arusha",
-        "addressRegion": "Arusha Region",
-        "addressCountry": "TZ"
-      }
-    }
-  }
-  </script>
-</head>
-<body>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ikonteki.co.tz/about" />
+    <meta property="og:title" content="About Us | Tech Agency & Youth Empowerment Arusha | IkonTeki Africa" />
+    <meta property="og:description" content="Discover IkonTeki Africa headquartered in Njiro, Arusha. You Own It, We Brand It. Discover our mission, engineering philosophy, and community impact." />
+    <meta property="og:image" content="images/ikonteki-hero-growth.jpg" />
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-content">
-      <a href="index.html" class="logo" aria-label="IkonTeki Africa">
-        <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" width="180" height="48" style="height: 48px; width: auto; max-width: 215px; object-fit: contain; display: block; mix-blend-mode: screen;" />
-      </a>
+    <!-- Favicon -->
+    <link rel="icon" href="images/ikonteki-africa-logo.png" />
+    <link rel="apple-touch-icon" href="images/ikonteki-africa-logo.png" />
+
+    <!-- Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body
+    x-data="{ page: 'about', 'darkMode': false, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : false;
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'b eh': darkMode === true}"
+    style="font-family: 'Plus Jakarta Sans', sans-serif;"
+  >
+    
+    <!-- ===== Header Start ===== -->
+    <header
+      class="g s r vd ya cj"
+      :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+      @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+      style="background-color: #0A0F1D !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 99999 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;"
+    >
+      <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+        <div class="vd to/4 tc wf yf">
+          <a href="index.html" class="tc wf xf sf" style="text-decoration: none;">
+            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
+          </a>
+
+          <!-- Hamburger Toggle BTN -->
+          <button class="po rc" @click="navigationOpen = !navigationOpen" aria-label="Toggle Navigation">
+            <span class="rc i pf re pd">
+              <span class="du-block h q vd yc">
+                <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+              </span>
+              <span class="du-block h q vd yc lf">
+                <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+                <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div
+          class="vd wo/4 sd qo f ho oo wf yf"
+          :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
+        >
+          <nav>
+            <ul class="tc _o sf yo cg ep">
+              <li><a href="index.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Home</a></li>
+              <li><a href="services.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Services</a></li>
+              <li><a href="about.html" class="xl" style="color: #00AEEF !important; font-weight: 600;">About Us</a></li>
+              <li><a href="portfolio.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Portfolio</a></li>
+              <li><a href="contact.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="tc wf ig pb no" style="gap: 16px; align-items: center;">
+            <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+              <label class="rc ab i" title="Toggle Light/Dark Theme" style="cursor: pointer;">
+                <input type="checkbox" :checked="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
+                <svg :class="{ 'wn' : !darkMode, 'xh' : darkMode }" class="th om" width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill="#F5A623"/>
+                </svg>
+                <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+              </label>
+            </div>
+
+            <a href="tel:+255712286993" style="color: #F5A623 !important; font-weight: 700; text-decoration: none; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
+              <i class="fa-solid fa-phone"></i> +255 712 286 993
+            </a>
+            <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20Africa%2C%20I%20would%20like%20to%20consult%20on%20digital%20services" target="_blank" rel="noopener noreferrer" class="btn-solid-cyan" style="padding: 8px 18px; font-size: 0.88rem; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i> Consult Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== Header End ===== -->
+    <main>
       
-      <button class="menu-toggle" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </button>
- 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="teki4impakt.html">TEKI 4 IMPAKT</a></li>
-          <li><a href="safaris.html">Ikon Safaris</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="mobile-only"><a href="contact.html" class="btn btn-brand">Start a Project</a></li>
-        </ul>
-      </nav>
-      <a href="contact.html" class="btn btn-brand"><i class="fa-solid fa-rocket"></i> Start a Project</a>
+  <!-- Page Hero Banner -->
+  <section style="padding: 140px 0 60px; background-color: #0A0F1D; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <div class="bb ze ki xn" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+      <div style="color: #F5A623; font-weight: 700; text-transform: uppercase; font-size: 0.88rem; letter-spacing: 0.06em; margin-bottom: 12px;">
+        THE REASON FOR YOUR BRAND
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 4.2vw, 3.4rem); font-weight: 800; color: #FFFFFF; line-height: 1.2; margin-bottom: 16px; font-family: 'Outfit', sans-serif;">
+        About <span style="color: #00AEEF;">IkonTeki Africa</span>
+      </h1>
+      <p style="font-size: 1.15rem; color: #94A3B8; line-height: 1.7; max-width: 740px; margin: 0 auto;">
+        Headquartered in Njiro, Arusha, we combine engineering rigor with market positioning to curate high-performance digital services across Tanzania and East Africa.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Page Hero (Solid Dark Blue, Zero Gradients) -->
-    <section class="hero" style="min-height: 42vh; padding: 130px 0 60px; background-color: var(--bg-dark);">
-      <div class="container text-center">
-        <span class="badge-brand" style="margin-bottom: 16px;"><i class="fa-solid fa-user-tie"></i> Leadership & Mission</span>
-        <h1 style="max-width: 900px; margin: 0 auto 18px; font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--text-white);">
-          Meet the Founder & The IkonTeki Story
-        </h1>
-        <p style="margin: 0 auto; max-width: 740px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;">
-          Founded by Tanzanian software developer <strong>Vedius Vedasto</strong> in Njiro, Arusha, IkonTeki Africa bridges enterprise software engineering, cloud systems, luxury safari tech, and community digital literacy.
-        </p>
-      </div>
-    </section>
-
-    <!-- FOUNDER SPOTLIGHT (Professional, Respects Personal Privacy) -->
-    <section style="padding: 20px 0 80px; background-color: var(--bg-dark);">
-      <div class="container">
-        <h2 class="visually-hidden">Executive Leadership &amp; Technical Direction</h2>
-        <div class="service-card" style="padding: 44px; border-radius: var(--radius-lg); background-color: var(--bg-surface); border: 1px solid var(--border-medium);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 44px; align-items: center;">
-            
-            <!-- Founder Portrait -->
-            <div>
-              <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-medium); background-color: #070b14;">
-                <img src="images/founder-vedius-vedasto-ikonteki.jpg" alt="Vedius Vedasto - Founder and Lead Developer of IkonTeki Africa" width="500" height="500" style="width: 100%; height: auto; display: block;" loading="lazy" decoding="async" />
-                <div style="padding: 20px; background-color: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle);">
-                  <span class="badge-brand" style="font-size: 0.72rem; padding: 4px 10px; margin-bottom: 6px;"><i class="fa-solid fa-code"></i> Technical Director</span>
-                  <h3 style="color: #fff; font-size: 1.35rem; margin: 6px 0 2px;">Vedius Vedasto</h3>
-                  <span style="color: var(--brand-blue); font-size: 0.88rem; font-weight: 600;">Founder &amp; Tech Director &bull; IkonTeki Africa</span>
-                </div>
-              </div>
-
-              <!-- Quick Info Card (Strictly Professional, No Privacy/CV Invasions) -->
-              <div style="margin-top: 20px; background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
-                <div style="display: grid; grid-template-columns: 1fr; gap: 10px; font-size: 0.9rem;">
-                  <div style="display: flex; gap: 10px; align-items: center;">
-                    <i class="fa-solid fa-briefcase" style="color: var(--brand-blue); width: 20px;"></i>
-                    <span><strong>Role:</strong> Founder &amp; Technical Director</span>
-                  </div>
-                  <div style="display: flex; gap: 10px; align-items: center;">
-                    <i class="fa-solid fa-location-dot" style="color: var(--brand-accent); width: 20px;"></i>
-                    <span><strong>Location:</strong> Njiro, Arusha, Tanzania</span>
-                  </div>
-                  <div style="display: flex; gap: 10px; align-items: center;">
-                    <i class="fa-solid fa-envelope" style="color: var(--brand-blue); width: 20px;"></i>
-                    <span><strong>Email:</strong> ikontekiafrica@gmail.com</span>
-                  </div>
-                  <div style="display: flex; gap: 10px; align-items: center;">
-                    <i class="fa-brands fa-whatsapp" style="color: var(--whatsapp); width: 20px;"></i>
-                    <span><strong>WhatsApp:</strong> +255 627 913 180</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Founder Philosophy & Proven Track Record -->
-            <div>
-              <span class="badge-accent" style="margin-bottom: 12px;"><i class="fa-solid fa-quote-left"></i> Core Philosophy</span>
-              <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom: 16px; color: var(--text-white);">
-                "Technology Should Help Real People Every Day"
-              </h2>
-
-              <blockquote style="font-size: 1.05rem; line-height: 1.75; color: #cbd5e1; border-left: 3px solid var(--brand-blue); padding-left: 18px; margin-bottom: 22px; font-style: italic; background-color: var(--bg-surface-elevated); padding: 16px 20px; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-                "Writing code is easy, but making something truly useful is what matters. To me, a good website is about helping a local safari company get more guests, helping a school share grades without mistakes, and helping young people in Tanzania learn skills that earn them a living."
-              </blockquote>
-
-              <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.75; margin-bottom: 18px;">
-                As the founder and technical director of IkonTeki Africa, <strong>Vedius Vedasto</strong> leads engineering and system architecture across every client platform. His portfolio includes live production platforms such as <a href="https://sautimarket.busteki.co.tz/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-blue); font-weight: 600; text-decoration: underline;">Sauti.Market</a>, <a href="https://busteki.co.tz/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-blue); font-weight: 600; text-decoration: underline;">Busteki Project Company</a>, <a href="https://ikonsafaris.com/" target="_blank" rel="noopener noreferrer" style="color: var(--brand-blue); font-weight: 600; text-decoration: underline;">Ikon Safaris</a>, Africa Independent Adventures, and institutional academic data systems.
-              </p>
-
-              <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.75; margin-bottom: 26px;">
-                Beyond building enterprise portals, Vedius actively leads <strong>TEKI 4 IMPAKT</strong>, dedicating time to mentor and train Tanzanian students and youth in practical web development, coding fundamentals, and workplace digital readiness.
-              </p>
-
-              <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
-                <a href="https://wa.me/255627913180?text=Hello%20Vedius,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                  <i class="fa-brands fa-whatsapp"></i> Chat with Vedius (+255 627 913 180)
-                </a>
-                <a href="portfolio.html" class="btn btn-outline">
-                  <i class="fa-solid fa-cubes"></i> View Our Works
-                </a>
-                <a href="tel:+255712286993" class="btn btn-secondary">
-                  <i class="fa-solid fa-phone"></i> +255 712 286 993
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Company Mission & Purpose -->
-    <section style="background-color: var(--bg-surface); padding: 80px 0;">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <span class="badge-brand" style="margin-bottom: 12px;"><i class="fa-solid fa-bullseye"></i> Our Purpose</span>
-          <h2 class="section-title">Engineering Digital Systems for Real Growth</h2>
-          <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
-            Headquartered in Njiro, Arusha, IkonTeki Africa was established to provide reliable, commercial-grade technology solutions for businesses, schools, and tour operators across Tanzania and East Africa.
+  <!-- Story & Philosophy -->
+  <section style="padding: 80px 0;">
+    <div class="bb ze ki xn" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px;">
+        <div style="flex: 1; min-width: 300px; max-width: 580px;">
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.25; margin-bottom: 20px; font-family: 'Outfit', sans-serif;">
+            You Own It. <span style="color: #00AEEF;">We Brand It.</span>
+          </h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+            At IkonTeki Africa, we believe that modern African enterprises deserve software and digital presence built to world-class standards. We don't believe in generic templates or cut-and-paste code — we engineer tailor-made digital engines that grant your brand an enduring market advantage.
           </p>
-          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 28px;">
-            We engineer bespoke software, high-uptime cloud hosting, and robust tourism platforms like <strong style="color: var(--brand-blue);">Ikon Safaris (ikonsafaris.com)</strong>. At the same time, we give back to our community through <strong>TEKI 4 IMPAKT</strong>, mentoring students into career-ready software professionals.
+          <p style="color: #475569; font-size: 1rem; line-height: 1.8; margin-bottom: 28px;">
+            From high-converting tourism booking engines in Arusha to multi-vendor marketplaces and community coding workshops, our work is defined by speed, uptime reliability, and measurable client ROI.
           </p>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
-            <div style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 22px;">
-              <div style="color: var(--brand-blue); font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;"><i class="fa-solid fa-eye"></i> Our Vision</div>
-              <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">To be East Africa's leading tech hub recognized for technical excellence, dependable execution, and real-world impact.</p>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div style="padding: 16px; border-radius: 12px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <div style="font-size: 2rem; font-weight: 800; color: #00AEEF; font-family: 'Outfit', sans-serif;">120+</div>
+              <div style="font-size: 0.9rem; color: #64748B; font-weight: 600;">Systems & Portals Built</div>
             </div>
-            <div style="background-color: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 22px;">
-              <div style="color: var(--brand-accent); font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;"><i class="fa-solid fa-compass"></i> Our Mission</div>
-              <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">To deliver robust digital platforms, cloud hosting, and empower local talent through hands-on skills mentorship.</p>
+            <div style="padding: 16px; border-radius: 12px; background: #F8FAFC; border: 1px solid #E2E8F0;">
+              <div style="font-size: 2rem; font-weight: 800; color: #F5A623; font-family: 'Outfit', sans-serif;">99.9%</div>
+              <div style="font-size: 0.9rem; color: #64748B; font-weight: 600;">Server Uptime Guarantee</div>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-medium);">
-            <img src="images/african-tech-innovators-arusha-collaboration.jpg" alt="African Tech Innovators Collaborating in Arusha Tech Hub" width="600" height="400" loading="lazy" decoding="async" style="width: 100%; height: auto; display: block;" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Pillars / Values -->
-    <section style="padding: 85px 0; background-color: var(--bg-dark);">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-brand"><i class="fa-solid fa-handshake"></i> Our Values</span>
-          <h2 class="section-title">How We Build & Operate</h2>
-          <p class="section-desc">Principles that guide every software deployment and community training session.</p>
-        </div>
-
-        <div class="vip-grid">
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3>Integrity & Reliability</h3>
-            <p>We deliver what we promise. Transparent timelines, milestone delivery, and ongoing technical support ensure long-term stability.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-server"></i></div>
-            <h3>Cloud & Performance</h3>
-            <p>Every application is architected for fast page speeds, high availability, and secure cloud infrastructure on local and international networks.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-people-roof"></i></div>
-            <h3>Community Empowerment</h3>
-            <p>Through TEKI 4 IMPAKT, we open our doors to mentor the next generation of East African programmers and digital creators.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div>
-          <a href="index.html" class="logo" style="margin-bottom: 16px;" aria-label="IkonTeki Africa">
-            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" width="160" height="42" style="height: 42px; width: auto; max-width: 195px; object-fit: contain; display: block; mix-blend-mode: screen;" />
-          </a>
-          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-top: 12px;">
-            Youth-led technology hub delivering enterprise web applications, cloud hosting, and tourism digital infrastructure across East Africa.
-          </p>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Solutions</h4>
-          <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="services.html" style="color: var(--text-muted);">Custom Software Engineering</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">Cloud Hosting & Infrastructure</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">Institutional Data Systems</a></li>
-            <li><a href="services.html" style="color: var(--text-muted);">EduTech Platforms</a></li>
-            <li><a href="safaris.html" style="color: var(--text-muted);">Tourism & Safari Portals</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Navigation</h4>
-          <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="about.html" style="color: var(--text-muted);">About Us</a></li>
-            <li><a href="portfolio.html" style="color: var(--text-muted);">Portfolio</a></li>
-            <li><a href="teki4impakt.html" style="color: var(--text-muted);">TEKI 4 IMPAKT</a></li>
-            <li><a href="safaris.html" style="color: var(--text-muted);">Ikon Safaris</a></li>
-            <li><a href="contact.html" style="color: var(--text-muted);">Contact Desk</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="color: #fff; margin-bottom: 16px; font-size: 1rem;">Direct Contact</h4>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
-            <i class="fa-solid fa-phone" style="color: var(--brand-blue); margin-right: 8px;"></i> +255 712 286 993
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 8px;">
-            <i class="fa-solid fa-envelope" style="color: var(--brand-blue); margin-right: 8px;"></i> ikontekiafrica@gmail.com
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 14px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--brand-blue); margin-right: 8px;"></i> Njiro, Arusha, Tanzania
-          </p>
-          <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20team" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 9px 16px; font-size: 0.85rem;">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 IkonTeki Africa. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/ikonteki-africa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.facebook.com/ikontekiafrica" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/ikontekiafrica/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <div style="flex: 1; min-width: 300px; max-width: 500px;">
+          <img src="images/african-tech-innovators-arusha-collaboration.jpg" alt="IkonTeki Africa Collaboration" style="width: 100%; border-radius: 18px; object-fit: cover; box-shadow: 0 12px 30px rgba(0,0,0,0.08);" />
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="main.js"></script>
-</body>
+  <!-- Community Impact: TEKI 4 IMPAKT -->
+  <section style="padding: 80px 0;">
+    <div class="bb ze ki xn" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px;">
+        <div style="flex: 1; min-width: 300px; max-width: 500px;">
+          <img src="images/youth-coding-workshop-arusha-mentorship.jpg" alt="TEKI 4 IMPAKT Youth Coding" style="width: 100%; border-radius: 18px; object-fit: cover; box-shadow: 0 12px 30px rgba(0,0,0,0.08);" />
+        </div>
+        <div style="flex: 1; min-width: 300px; max-width: 580px;">
+          <div style="color: #00AEEF; font-weight: 700; text-transform: uppercase; font-size: 0.88rem; letter-spacing: 0.06em; margin-bottom: 12px;">
+            COMMUNITY EMPOWERMENT
+          </div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.25; margin-bottom: 20px; font-family: 'Outfit', sans-serif;">
+            TEKI 4 IMPAKT Initiative
+          </h2>
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+            Technology should create lasting local opportunity. Through our <strong>TEKI 4 IMPAKT</strong> program, IkonTeki Africa mentors secondary school students, underprivileged youth, and career transitioners in Arusha with real coding and digital application skills.
+          </p>
+          <p style="color: #475569; font-size: 1rem; line-height: 1.8; margin-bottom: 28px;">
+            We have already empowered over 500 students with practical computer capabilities, preparing them for remote digital work, freelancing, and university-level computer science programs.
+          </p>
+          <a href="contact.html" class="btn-solid-cyan"><i class="fa-solid fa-graduation-cap"></i> Support or Join Our Workshops</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    </main>
+    
+    <!-- ===== Footer Start ===== -->
+    <footer style="background-color: #070B14 !important; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 60px;">
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div class="ji gp" style="padding-bottom: 40px;">
+          <div class="tc uf ap gg fp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+            <div class="animate_top">
+              <a href="index.html" style="display: inline-block; margin-bottom: 14px;">
+                <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
+              </a>
+              <p style="color: #94a3b8; font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
+                IkonTeki Africa curates high-performance digital services designed to accelerate your brand's market growth.
+              </p>
+              <div style="font-size: 0.88rem; color: #F5A623; font-weight: 700;">
+                YOU OWN IT • WE BRAND IT
+              </div>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Core Capabilities</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Software Solutions</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Cloud Services</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Digital Marketing & Ads</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Digital Coaching & Classes</a></li>
+              </ul>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Quick Navigation</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Home</a></li>
+                <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Services</a></li>
+                <li><a href="about.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">About Us</a></li>
+                <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Portfolio</a></li>
+                <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="animate_top">
+              <h4 style="color: #FFFFFF; font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Contact Us Today</h4>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; color: #94a3b8; font-size: 0.9rem;">
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-phone" style="color: #00AEEF;"></i> <a href="tel:+255712286993" style="color: #e2e8f0; text-decoration: none;">+255 712 286 993</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-envelope" style="color: #F5A623;"></i> <a href="mailto:ikontekiafrica@gmail.com" style="color: #e2e8f0; text-decoration: none;">ikontekiafrica@gmail.com</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-globe" style="color: #00AEEF;"></i> <a href="https://www.ikonteki.co.tz" style="color: #e2e8f0; text-decoration: none;">www.ikonteki.co.tz</a></li>
+                <li style="display: flex; gap: 8px; align-items: center;"><i class="fa-solid fa-location-dot" style="color: #10B981;"></i> <span>Njiro, Arusha, Tanzania</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <p style="color: #79808a; font-size: 0.88rem; margin: 0;">
+            &copy; 2026 IkonTeki Africa. All rights reserved. The Reason For Your Brand.
+          </p>
+          <div style="display: flex; gap: 14px;">
+            <a href="https://instagram.com/ikontekiafrica" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/ikontekiafrica" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/255712286993" target="_blank" style="color: #94a3b8; font-size: 1.1rem; text-decoration: none;"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ===== Footer End ===== -->
+    
+    <script defer src="bundle.js"></script>
+  </body>
 </html>
