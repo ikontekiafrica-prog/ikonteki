@@ -7,74 +7,17 @@
     <title>IkonTeki Africa | Engineering Your Digital Advantage</title>
     <meta name="description" content="IkonTeki Africa curates high-performance digital services designed to accelerate your brand's market growth. Software solutions, cloud services, digital marketing, and coaching in Arusha, Tanzania." />
   <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
-  <body
-    x-data="{ page: 'home', 'darkMode': false, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+  <body class="b eh"
+    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
     x-init="
-         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : false;
+         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : true;
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
     :class="{'b eh': darkMode === true}"
   >
     <!-- ===== Header Start ===== -->
-    <header class="g s r vd ya cj" style="background-color: #0A0F1D !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 99999 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;"
-  :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
-  @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
->
-  <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
-    <div class="vd to/4 tc wf yf">
-      <a href="index.html" class="tc wf xf sf" style="text-decoration: none;">
-        <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
-      </a>
-
-      <!-- Hamburger Toggle BTN -->
-      <button class="po rc" @click="navigationOpen = !navigationOpen">
-        <span class="rc i pf re pd">
-          <span class="du-block h q vd yc">
-            <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
-            <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
-            <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
-          </span>
-          <span class="du-block h q vd yc lf">
-            <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
-            <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
-          </span>
-        </span>
-      </button>
-      <!-- Hamburger Toggle BTN -->
-    </div>
-
-    <div
-      class="vd wo/4 sd qo f ho oo wf yf"
-      :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
-    >
-      <nav>
-        <ul class="tc _o sf yo cg ep">
-          <li><a href="index.html" class="xl" style="color: #00AEEF !important; font-weight: 600;">Home</a></li>
-          <li><a href="services.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Services</a></li>
-          <li><a href="about.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">About Us</a></li>
-          <li><a href="portfolio.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Portfolio</a></li>
-          <li><a href="contact.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="tc wf ig pb no">
-        <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
-          <label class="rc ab i">
-            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
-            <!-- Icon Sun -->
-            <svg :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }" class="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill=""/>
-            </svg>
-            <!-- Icon Sun -->
-            <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
-          </label>
-        </div>
-
-        <a href="tel:+255712286993" style="color: #F5A623 !important; font-weight: 700; text-decoration: none; font-size: 0.95rem; margin-right: 12px;">+255 712 286 993</a>
-   <a href="#support" class="btn-solid-cyan" style="padding: 8px 20px; font-size: 0.88rem;">Consult Now</a>
-      </div>
-    </div>
-  </div>
-</header>
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+    <!-- ===== Header End ===== -->
 
     <!-- ===== Header End ===== -->
 
@@ -159,46 +102,101 @@
       </section>
       <!-- ===== Small Features End ===== -->
 
-      <!-- ===== About Start ===== -->
-      <section class="ji gp uq 2xl:ud-py-35 pg">
+      <!-- ===== Teki 4 Impakt / Digital Coaching Start ===== -->
+      <section id="teki4impakt" class="ji gp uq 2xl:ud-py-35 pg">
         <div class="bb ze ki xn wq">
           <div class="tc wf gg qq">
             <!-- About Images -->
             <div class="animate_left xc gn gg jn/2 i">
               <div>
                 <img src="images/shape-05.svg" alt="Shape" class="h -ud-left-5 x" />
-                <img src="images/about-01.png" alt="About" class="ib" />
-                <img src="images/about-02.png" alt="About" />
+                <img src="images/youth-coding-workshop-arusha-mentorship.jpg" alt="Teki 4 Impakt Youth Coding Workshop" class="ib" style="border-radius: 16px; object-fit: cover; width: 290px; height: 340px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);" />
+                <img src="images/digital-career-coaching.jpg" alt="Digital Career Coaching & Mentorship" style="border-radius: 16px; object-fit: cover; width: 290px; height: 340px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);" />
               </div>
               <div>
                 <img src="images/shape-06.svg" alt="Shape" />
-                <img src="images/about-03.png" alt="About" class="ob gb" />
+                <img src="images/teki4impakt-hero.JPG" alt="Teki 4 Impakt Empowerment" class="ob gb" style="border-radius: 16px; object-fit: cover; width: 290px; height: 460px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" />
                 <img src="images/shape-07.svg" alt="Shape" class="bb" />
+              </div>
+
+              <!-- Floating Impact Badge -->
+              <div class="h" style="bottom: 25px; left: 20px; background: rgba(10, 15, 29, 0.92); backdrop-filter: blur(10px); padding: 12px 18px; border-radius: 14px; border: 1px solid rgba(0, 174, 239, 0.3); display: flex; align-items: center; gap: 12px; z-index: 10; box-shadow: 0 12px 30px rgba(0,0,0,0.35);">
+                <div style="background: rgba(0, 174, 239, 0.15); border-radius: 10px; padding: 8px; display: flex; align-items: center; justify-content: center;">
+                  <img src="images/teki4impakt-logo.png" alt="Teki 4 Impakt" style="height: 26px; width: auto; object-fit: contain;" />
+                </div>
+                <div>
+                  <div style="color: #FFFFFF; font-weight: 800; font-size: 0.95rem; line-height: 1.2;">500+ Youths & Students</div>
+                  <div style="color: #00AEEF; font-size: 0.78rem; font-weight: 600;">Coached in Coding & Modern IT</div>
+                </div>
               </div>
             </div>
 
             <!-- About Content -->
             <div class="animate_right jn/2">
-              <h4 class="ek yj mk gb" style="color: #F5A623 !important; font-weight: 700;">Why Partner With IkonTeki Africa</h4>
-              <h2 class="fk vj zp pr kk wm qb" style="font-weight: 800; line-height: 1.2;">
-     The Reason For Your Brand — Where Engineering Meets Market Leadership.
-   </h2>
-              <p class="uo" style="line-height: 1.75; margin-bottom: 24px;">
-     At IkonTeki Africa, we believe in one core truth: <strong>You Own It, We Brand It</strong>. Headquartered in Njiro, Arusha, we don't just write code — we engineer your digital advantage. From ambitious startups to established safari enterprises and community initiatives, we deliver high-performance digital infrastructure that dominates markets.
-   </p>
-
-              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" data-fslightbox class="vc wf hg mb">
-                <span class="tc wf xf be dd rg i gh ua">
-                  <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
-                  <img src="images/icon-play.svg" alt="Play" />
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+                <span style="background: rgba(245, 166, 35, 0.15); color: #F5A623; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 6px;">
+                  TEKI 4 IMPAKT PROGRAM
                 </span>
-                <span class="kk">SEE HOW WE WORK</span>
-              </a>
+                <span style="color: #00AEEF; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                  DIGITAL COACHING
+                </span>
+              </div>
+
+              <h2 class="fk vj zp pr kk wm qb" style="font-weight: 800; line-height: 1.2; font-size: clamp(1.85rem, 3.2vw, 2.6rem); margin-bottom: 18px;">
+                Empowering Youths with Modern Coding, Computing & Digital Career Skills
+              </h2>
+
+              <p class="uo" style="line-height: 1.75; margin-bottom: 24px; font-size: 1.05rem;">
+                Through our flagship digital coaching initiative, <strong>Teki 4 Impakt</strong>, IkonTeki Africa prepares students, youths, and aspiring IT personnel to lead in the digital era. We provide hands-on training in software coding and programming, practical computer applications, and 1-on-1 career coaching to give learners modern computing mastery so they seamlessly fit into today's employable digital economy market.
+              </p>
+
+              <!-- Program Highlights Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 28px;">
+                <div style="padding: 14px; border-radius: 12px; background: rgba(0, 174, 239, 0.05); border: 1px solid rgba(0, 174, 239, 0.18);">
+                  <div style="color: #00AEEF; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <span>Coding & Programming</span>
+                  </div>
+                  <p style="font-size: 0.86rem; line-height: 1.5; color: #64748B; margin: 0;">Web development, Python, algorithmic thinking, and modern software engineering.</p>
+                </div>
+
+                <div style="padding: 14px; border-radius: 12px; background: rgba(245, 166, 35, 0.06); border: 1px solid rgba(245, 166, 35, 0.22);">
+                  <div style="color: #F5A623; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span>Computer Applications</span>
+                  </div>
+                  <p style="font-size: 0.86rem; line-height: 1.5; color: #64748B; margin: 0;">Practical workplace computing, cloud productivity suites, and modern business tools.</p>
+                </div>
+
+                <div style="padding: 14px; border-radius: 12px; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.22); grid-column: 1 / -1;">
+                  <div style="color: #10B981; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><polyline points="12 11 12 17 15 14"></polyline></svg>
+                    <span>Digital Career Coaching & Employability</span>
+                  </div>
+                  <p style="font-size: 0.86rem; line-height: 1.5; color: #64748B; margin: 0;">Tailored mentorship for IT students and career-changers to build competitive portfolios and secure remote or local tech employment.</p>
+                </div>
+              </div>
+
+              <!-- Video Action & Enroll Row -->
+              <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+                <a href="https://www.youtube.com/watch?v=Tov-jkujAME" data-fslightbox class="vc wf hg" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                  <span class="tc wf xf be dd rg i gh ua" style="box-shadow: 0 4px 18px rgba(0, 174, 239, 0.45);">
+                    <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
+                    <img src="images/icon-play.svg" alt="Play Video" />
+                  </span>
+                  <span class="kk" style="font-weight: 700; letter-spacing: 0.03em; font-size: 0.95rem;">WATCH TEKI 4 IMPAKT VIDEO</span>
+                </a>
+
+                <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20Africa%2C%20I%20am%20interested%20in%20the%20Teki%204%20Impakt%20Digital%20Coaching%20program." target="_blank" rel="noopener noreferrer" class="btn-solid-cyan" style="padding: 12px 24px; font-size: 0.92rem; text-decoration: none;">
+                  <span>Join Teki 4 Impakt</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ===== About End ===== -->
+      <!-- ===== Teki 4 Impakt / Digital Coaching End ===== -->
 
       <!-- ===== Services Start ===== -->
       <section id="services" class="lj tp kr">
@@ -249,11 +247,11 @@
               <p style="line-height: 1.6;">Memorable logo identity, corporate collateral, modern UI/UX design, and creative market positioning.</p>
             </div>
 
-            <!-- Service Item 5: Digital Coaching (From Banner) -->
+            <!-- Service Item 5: Digital Coaching (Teki 4 Impakt) -->
             <div class="animate_top sg oi pi zq ml il am cn _m" style="border: 1px solid rgba(0, 0, 0, 0.08);">
               <img src="images/icon-05.svg" alt="Digital Coaching" />
-              <h4 class="ek zj kk wm nb _b" style="font-weight: 700;">Digital Coaching</h4>
-              <p style="line-height: 1.6;">Digital career coaching, programming classes (Web & Python), computer application classes, and youth mentorship.</p>
+              <h4 class="ek zj kk wm nb _b" style="font-weight: 700;">Digital Coaching (Teki 4 Impakt)</h4>
+              <p style="line-height: 1.6;">Our Teki 4 Impakt initiative: digital career coaching, coding & programming classes (Web & Python), computer application classes, and youth mentorship.</p>
             </div>
 
             <!-- Service Item 6: Enterprise Support -->
@@ -349,169 +347,28 @@
       </section>
       <!-- ===== Pricing Table End ===== -->
 
-      <!-- ===== Projects Start ===== -->
-      <section id="projects" class="pg pj vp mr oj wp nr">
-        <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: 'Proven Client Portfolios & Platforms', sectionTitleText: 'Explore selected enterprise platforms, tourism booking portals, and community initiatives engineered by IkonTeki Africa.'}"
-        >
-          <div class="animate_top bb ze rj ki xn vq">
-    <h2
-            x-text="sectionTitle"
-            class="fk vj pr kk wm on/5 gq/2 bb _b"
-    >
-    </h2>
-    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-</div>
-
-
-        </div>
-        <!-- Section Title End -->
-
-        <div class="bb ze ki xn 2xl:ud-px-0 jb" x-data="{filterTab: 1}">
-          <!-- Porject Tab -->
-          <div
-            class="projects-tab _e bb tc uf wf xf cg rg hh rm vk xm si ti fc"
-          >
-            <button
-              data-filter="*"
-              @click="filterTab = 1"
-              :class="{ 'gh lk' : filterTab === 1 }"
-              class="project-tab-btn ek rg ml il vi mi"
-            >
-              All
-            </button>
-            <button
-              data-filter=".branding"
-              @click="filterTab = 2"
-              :class="{ 'gh lk' : filterTab === 2 }"
-              class="project-tab-btn ek rg ml il vi mi"
-            >Software Solutions</button>
-            <button
-              data-filter=".digital"
-              @click="filterTab = 3"
-              :class="{ 'gh lk' : filterTab === 3 }"
-              class="project-tab-btn ek rg ml il vi mi"
-            >Tourism & Safari</button>
-            <button
-              data-filter=".ecommerce"
-              @click="filterTab = 4"
-              :class="{ 'gh lk' : filterTab === 4 }"
-              class="project-tab-btn ek rg ml il vi mi"
-            >Logistics & Commerce</button>
-          </div>
-
-          <!-- Projects item wrapper -->
-          <div class="projects-wrapper tc -ud-mx-5">
-            <div class="project-sizer"></div>
-            <!-- Project Item -->
-            <div class="project-item wi fb vd jn/2 to/3 branding ecommerce">
-              <div class="c i pg sg z-1">
-                <img src="images/project-sautimarket-platform.webp" class="project-card-thumb" alt="Project" />
-
-                <div 
-                  class="h s r df nl kl im tc sf wf xf vd yc sg al hh/20 z-10"
-                >
-                  <h4 class="ek tj kk hc" style="font-weight: 700; color: #FFFFFF;">IkonTeki Enterprise Work</h4>
-            <p style="color: #F5A623; font-weight: 600;">You Own It • We Brand It</p>
-                  <a
-                    class="c tc wf xf ie ld rg _g dh ml il ph jm km jc"
-                    href="#"
-                  >
-                    <svg class="th lm ml il" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project Item -->
-            <div class="project-item wi fb vd jn/2 to/3 digital">
-              <div class="c i pg sg z-1">
-                <img src="images/project-africaindependentadventures.webp" class="project-card-thumb" alt="Project" />
-
-                <div
-                  class="h s r df nl kl im tc sf wf xf vd yc sg al hh/20 z-10"
-                >
-                  <h4 class="ek tj kk hc" style="font-weight: 700; color: #FFFFFF;">IkonTeki Enterprise Work</h4>
-            <p style="color: #F5A623; font-weight: 600;">You Own It • We Brand It</p>
-                  <a
-                    class="c tc wf xf ie ld rg _g dh ml il ph jm km jc"
-                    href="#"
-                  >
-                    <svg class="th lm ml il" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project Item -->
-            <div class="project-item wi fb vd jn/2 to/3 branding ecommerce">
-              <div class="c i pg sg z-1">
-                <img src="images/project-busteki-company.png" class="project-card-thumb" alt="Project" />
-
-                <div
-                  class="h s r df nl kl im tc sf wf xf vd yc sg al hh/20 z-10"
-                >
-                  <h4 class="ek tj kk hc" style="font-weight: 700; color: #FFFFFF;">IkonTeki Enterprise Work</h4>
-            <p style="color: #F5A623; font-weight: 600;">You Own It • We Brand It</p>
-                  <a
-                    class="c tc wf xf ie ld rg _g dh ml il ph jm km jc"
-                    href="#"
-                  >
-                    <svg class="th lm ml il" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project Item -->
-            <div class="project-item wi fb vd vo/3 digital ecommerce">
-              <div class="c i pg sg z-1">
-                <img src="images/project-gfamilyadventures.webp" class="project-card-thumb" alt="Project" />
-
-                <div
-                  class="h s r df nl kl im tc sf wf xf vd yc sg al hh/20 z-10"
-                >
-                  <h4 class="ek tj kk hc" style="font-weight: 700; color: #FFFFFF;">IkonTeki Enterprise Work</h4>
-            <p style="color: #F5A623; font-weight: 600;">You Own It • We Brand It</p>
-                  <a
-                    class="c tc wf xf ie ld rg _g dh ml il ph jm km jc"
-                    href="#"
-                  >
-                    <svg class="th lm ml il" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Projects End ===== -->
-
-      <!-- ===== Testimonials Start ===== -->
+      <!-- ===== Testimonials / Google Reviews Start ===== -->
       <section class="hj rp hr">
         <!-- Section Title Start -->
         <div
           x-data="{ sectionTitle: 'What Our Partners Say', sectionTitleText: 'Trusted by businesses, safari operators, and organizations across Tanzania.'}"
         >
           <div class="animate_top bb ze rj ki xn vq">
-    <h2
-            x-text="sectionTitle"
-            class="fk vj pr kk wm on/5 gq/2 bb _b"
-    >
-    </h2>
-    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-</div>
+            <h2
+              x-text="sectionTitle"
+              class="fk vj pr kk wm on/5 gq/2 bb _b"
+            ></h2>
+            <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
 
-
+            <!-- Review Summary Badge -->
+            <div class="tc wf xf" style="margin-top: 18px;">
+              <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.95); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+                <span style="font-weight: 700; color: #0F172A; font-size: 0.92rem;">Client Reviews</span>
+                <span style="font-weight: 800; color: #F5A623; font-size: 0.96rem;">5.0</span>
+                <span style="color: #FBBC04; font-size: 1.05rem; letter-spacing: 2px;">★★★★★</span>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Section Title End -->
 
@@ -521,34 +378,182 @@
             <div class="swiper testimonial-01">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-                <!-- Slides -->
+
+                <!-- Slide 1: Baraka Mushi -->
                 <div class="swiper-slide">
-                  <div class="i hh rm sg vk xm bi qj">
-                    <!-- Border Shape -->
-                    <span class="rc je md/2 gh xg h q r"></span>
-                    <span class="rc je md/2 mh yg h q p"></span>
-
-                    <div class="tc sf rn tn un zf dp">
-                      <img class="bf" src="images/testimonial.png" alt="User" />
-
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #E0F2FE; display: flex; align-items: center; justify-content: center; color: #0284C7; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
                       <div>
-                        <img src="images/icon-quote.svg" alt="Quote" />
-                        <p class="ek ik xj _p kc fb">
-                          IkonTeki Africa transformed our online presence. Our safari booking portal now handles seamless payments and international inquiries with zero downtime. Truly the reason for our brand.
-                        </p>
-
-                        <div class="tc yf vf">
-                          <div>
-                            <span class="rc ek xj kk wm zb">Baraka Mushi</span>
-                            <span class="rc">Managing Director, Tourism Logistics</span>
-                          </div>
-
-                          <img class="rk" src="images/brand-light-02.svg" alt="Brand" />
-                        </div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Baraka Mushi</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Managing Director, Tourism Logistics • Arusha</span>
                       </div>
                     </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "IkonTeki Africa transformed our online safari booking infrastructure. The custom platform they engineered handles real-time safari itinerary requests, seamless international card payments, and fast WhatsApp inquiries with zero downtime. Easily the most reliable tech agency in Arusha."
+                    </p>
                   </div>
                 </div>
+
+                <!-- Slide 2: Neema Kimaro -->
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #FEF3C7; display: flex; align-items: center; justify-content: center; color: #D97706; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Neema Kimaro</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Founder, Retail & E-Commerce • Dar es Salaam</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "We hired IkonTeki for a complete brand redesign, custom web application, and cloud hosting setup. Their engineers delivered ahead of schedule and our website speed is phenomenal. Our online sales and organic Google search traffic doubled within two months."
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Godfrey Temu -->
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #D1FAE5; display: flex; align-items: center; justify-content: center; color: #059669; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Godfrey Temu</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Enterprise IT Director • Moshi, Kilimanjaro</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "Their cloud services and automated data backup systems saved our operations. Having dedicated corporate domain emails and 24/7 technical monitoring right here in Northern Tanzania gives our executive team total peace of mind. Excellent communication throughout."
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Amina Salum -->
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #EDE9FE; display: flex; align-items: center; justify-content: center; color: #7C3AED; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Amina Salum</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Teki 4 Impakt Graduate & Junior Developer • Arusha</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "The Teki 4 Impakt digital coaching program gave me practical coding skills in Python and web development. The hands-on career coaching and portfolio reviews directly helped me secure my first remote software role. IkonTeki is genuinely empowering Tanzanian youth."
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 5: Erick Lyimo -->
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #CFFAFE; display: flex; align-items: center; justify-content: center; color: #0891B2; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Erick Lyimo</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Logistics & Supply Chain Director • Njiro, Arusha</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "Outstanding software engineering. They built an automated fleet tracking and dispatch portal tailored to our regional logistics business. The workflow automation reduced manual phone calls by 70%. Truly the reason for our brand advantage."
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 6: Happy Mollel -->
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #FFE4E6; display: flex; align-items: center; justify-content: center; color: #E11D48; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Happy Mollel</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Hospitality & Safari Lodge Manager • Arusha</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "IkonTeki designed our lodge website and managed our targeted Google and Meta advertising campaigns. We reached full room occupancy throughout the high safari season. Professional team, transparent pricing, and world-class service standards."
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Slide 7: Daudi Ndosi -->
+                <div class="swiper-slide">
+                  <div class="i hh rm sg vk xm" style="max-width: 820px; margin: 0 auto; border-radius: 18px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 32px 36px;">
+                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+                      <div style="width: 50px; height: 50px; border-radius: 50%; background: #E0E7FF; display: flex; align-items: center; justify-content: center; color: #4F46E5; flex-shrink: 0;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="ek xj kk wm" style="font-weight: 700; font-size: 1.08rem; margin: 0 0 2px 0;">Daudi Ndosi</h4>
+                        <span style="font-size: 0.84rem; color: #64748B;">Financial Technology Consultant • Dar es Salaam</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 14px;">
+                      <div style="display: flex; gap: 2px; color: #FBBC04; font-size: 1.15rem;">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
+                    <p class="ek ik xj _p" style="line-height: 1.75; font-size: 1.02rem; margin: 0;">
+                      "From security architecture to high-speed NVMe cloud hosting, IkonTeki Africa operates at global standards. They understand modern code, payment integrations, and African enterprise needs better than anyone else we have worked with."
+                    </p>
+                  </div>
+                </div>
+
               </div>
               <!-- If we need navigation -->
               <div class="tc wf xf fg jb">
@@ -574,7 +579,7 @@
           </div>
         </div>
       </section>
-      <!-- ===== Testimonials End ===== -->
+      <!-- ===== Testimonials / Google Reviews End ===== -->
 
       <!-- ===== Counter Start ===== -->
       <section class="i pg qh rm ji hp">
@@ -606,46 +611,44 @@
       <section class="pj vp mr">
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `Trusted by Global Brands`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+          x-data="{ sectionTitle: `Our Trusted Partners`, sectionTitleText: `Collaborating with innovative platforms, community initiatives, and enterprise leaders across Tanzania, including Busteki, Route Africa, Ikon Safaris, Sauti Market, and IBSUC.`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
-    <h2
-            x-text="sectionTitle"
-            class="fk vj pr kk wm on/5 gq/2 bb _b"
-    >
-    </h2>
-    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-</div>
-
-
+            <h2
+              x-text="sectionTitle"
+              class="fk vj pr kk wm on/5 gq/2 bb _b"
+            ></h2>
+            <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+          </div>
         </div>
         <!-- Section Title End -->
 
         <div class="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
-          <div class="wc rf qn zf cp kq xf wf">
-            <a href="#" class="rc animate_top">
-              <img class="th wl ml il zl om" src="images/brand-light-01.svg" alt="Clients" />
-              <img class="xc sk ml il zl nm" src="images/brand-dark-01.svg" alt="Clients" />
+          <div class="wc rf qn zf cp kq xf wf" style="display: flex !important; flex-wrap: wrap !important; justify-content: center !important; align-items: center !important; gap: 42px !important;">
+            <a href="#" class="rc animate_top" title="Busteki" style="display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+              <img class="tk ml il zl om" src="images/brand-light-01.svg" alt="Busteki" />
+              <img class="xc sk ml il zl nm" src="images/brand-dark-01.svg" alt="Busteki" />
+              <span style="font-size: 0.82rem; font-weight: 600; color: #64748B; letter-spacing: 0.5px;">Busteki</span>
             </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-02.svg" alt="Clients" />
-              <img class="xc sk ml il zl nm" src="images/brand-dark-02.svg" alt="Clients" />
+            <a href="#" class="rc animate_top" title="Route Africa" style="display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+              <img class="tk ml il zl om" src="images/brand-light-02.svg" alt="Route Africa" />
+              <img class="xc sk ml il zl nm" src="images/brand-dark-02.svg" alt="Route Africa" />
+              <span style="font-size: 0.82rem; font-weight: 600; color: #64748B; letter-spacing: 0.5px;">Route Africa</span>
             </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-03.svg" alt="Clients" />
-              <img class="xc sk ml il zl nm" src="images/brand-dark-03.svg" alt="Clients" />
+            <a href="#" class="rc animate_top" title="Ikon Safaris" style="display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+              <img class="tk ml il zl om" src="images/brand-light-03.svg" alt="Ikon Safaris" />
+              <img class="xc sk ml il zl nm" src="images/brand-dark-03.svg" alt="Ikon Safaris" />
+              <span style="font-size: 0.82rem; font-weight: 600; color: #64748B; letter-spacing: 0.5px;">Ikon Safaris</span>
             </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-04.svg" alt="Clients" />
-              <img class="xc sk ml il zl nm" src="images/brand-dark-04.svg" alt="Clients" />
+            <a href="#" class="rc animate_top" title="Sauti Market" style="display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+              <img class="tk ml il zl om" src="images/brand-light-04.svg" alt="Sauti Market" />
+              <img class="xc sk ml il zl nm" src="images/brand-dark-04.svg" alt="Sauti Market" />
+              <span style="font-size: 0.82rem; font-weight: 600; color: #64748B; letter-spacing: 0.5px;">Sauti Market</span>
             </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-05.svg" alt="Clients" />
-              <img class="xc sk ml il zl nm" src="images/brand-dark-05.svg" alt="Clients" />
-            </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-06.svg" alt="Clients" />
-              <img class="xc sk ml il zl nm" src="images/brand-dark-06.svg" alt="Clients" />
+            <a href="#" class="rc animate_top" title="IBSUC" style="display: inline-flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+              <img class="tk ml il zl om" src="images/brand-light-05.svg" alt="IBSUC" />
+              <img class="xc sk ml il zl nm" src="images/brand-dark-05.svg" alt="IBSUC" />
+              <span style="font-size: 0.82rem; font-weight: 600; color: #64748B; letter-spacing: 0.5px;">IBSUC</span>
             </a>
           </div>
         </div>
@@ -654,115 +657,323 @@
 
       <!-- ===== Blog Start ===== -->
       <section class="ji gp uq">
-        <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: `Latest Blogs & News`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
-        >
-          <div class="animate_top bb ze rj ki xn vq">
-    <h2
-            x-text="sectionTitle"
-            class="fk vj pr kk wm on/5 gq/2 bb _b"
-    >
-    </h2>
-    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-</div>
-
-
+        <!-- Section Title with Right-Side Button -->
+        <div class="bb ze ki xn vq" style="margin-bottom: 36px;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px;">
+            <div>
+              <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                Industry Insights
+              </span>
+              <h2 class="fk vj pr kk wm" style="font-size: 2.2rem; font-weight: 800; margin: 0 0 10px 0;">
+                Latest Blogs & News
+              </h2>
+              <p style="color: #94A3B8; font-size: 1.02rem; max-width: 620px; margin: 0; line-height: 1.6;">
+                Explore our practical perspectives on SEO, digital career skills, high-converting websites, cloud infrastructure, and African tech innovation.
+              </p>
+            </div>
+            <div>
+              <a href="blog-grid.html" class="btn-solid-cyan" style="padding: 12px 28px; font-weight: 700; text-decoration: none; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;">
+                Read More Articles <span style="font-size: 1.1rem;">→</span>
+              </a>
+            </div>
+          </div>
         </div>
         <!-- Section Title End -->
 
         <div class="bb ye ki xn vq jb jo">
-          <div class="wc qf pn xo zf iq">
-            <!-- Blog Item -->
-            <div class="animate_top sg vk rm xm">
-              <div class="c rc i z-1 pg">
-                <img class="w-full" src="images/blog-01.png" alt="Blog" />
+          <div class="wc qf pn xo zf iq" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px;">
 
-                <div
-                  class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10"
-                >
-                  <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi"
-                    >Read More</a
-                  >
+            <!-- Blog Item: SEO in Tanzania: Proven Tips to Rank on Google and Double Local Sales -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #0A0F1D; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+              <div class="c rc i z-1 pg" style="position: relative; overflow: hidden; height: 230px;">
+                <img class="w-full" src="images/seo-in-tanzania-google-ranking-strategy.jpg" alt="SEO in Tanzania Google search ranking strategy and local optimization" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+
+                <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+                  <a href="blog-seo-tips-tanzania.html" class="vc ek rg lk gh sl ml il gi hi" style="padding: 8px 22px; font-weight: 700; border-radius: 6px;">
+                    Read Article
+                  </a>
                 </div>
               </div>
 
-              <div class="yh">
-                <div class="tc uf wf ag jq">
-                  <div class="tc wf ag">
-                    <img src="images/icon-man.svg" alt="User" />
-                    <p>Musharof Chy</p>
+              <div class="yh" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                <div style="margin-bottom: 10px;">
+                  <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.78rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; text-transform: uppercase;">
+                    Search Engine Optimization
+                  </span>
+                </div>
+
+                <div class="tc uf wf ag jq" style="margin-bottom: 12px; gap: 14px;">
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-man.svg" alt="Publisher" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">IkonTeki Africa</p>
                   </div>
-                  <div class="tc wf ag">
-                    <img src="images/icon-calender.svg" alt="Calender" />
-                    <p>25 Dec, 2025</p>
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-calender.svg" alt="Date" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">12 Jan, 2026</p>
                   </div>
                 </div>
-                <h4 class="ek tj ml il kk wm xl eq lb">
-                  <a href="blog-single.html">Free advertising for your online business</a>
+
+                <h4 class="ek tj ml il kk wm xl eq lb" style="font-size: 1.12rem; font-weight: 700; line-height: 1.45; margin-bottom: 12px; color: #FFFFFF;">
+                  <a href="blog-seo-tips-tanzania.html" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#FFFFFF'">
+                    SEO in Tanzania: Proven Tips to Rank on Google and Double Local Sales
+                  </a>
                 </h4>
+
+                <p style="font-size: 0.90rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                  Master local SEO tactics, Google Business Profile....
+                </p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                  <a href="blog-seo-tips-tanzania.html" style="color: #00AEEF; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Read Full Article <span>→</span>
+                  </a>
+                  <span style="font-size: 0.78rem; color: #F5A623; font-weight: 600;">⏱ 7 min read</span>
+                </div>
               </div>
             </div>
 
-            <!-- Blog Item -->
-            <div class="animate_top sg vk rm xm">
-              <div class="c rc i z-1 pg">
-                <img class="w-full" src="images/blog-02.png" alt="Blog" />
+            <!-- Blog Item: How to Build a High-Income Digital Career in Tanzania: Skills, Mentorship, and Remote Work -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #0A0F1D; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+              <div class="c rc i z-1 pg" style="position: relative; overflow: hidden; height: 230px;">
+                <img class="w-full" src="images/digital-career-in-tanzania-software-skills.jpg" alt="digital career in Tanzania software engineering and digital skills" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
 
-                <div
-                  class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10"
-                >
-                  <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi"
-                    >Read More</a
-                  >
+                <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+                  <a href="blog-digital-career-east-africa.html" class="vc ek rg lk gh sl ml il gi hi" style="padding: 8px 22px; font-weight: 700; border-radius: 6px;">
+                    Read Article
+                  </a>
                 </div>
               </div>
 
-              <div class="yh">
-                <div class="tc uf wf ag jq">
-                  <div class="tc wf ag">
-                    <img src="images/icon-man.svg" alt="User" />
-                    <p>Musharof Chy</p>
+              <div class="yh" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                <div style="margin-bottom: 10px;">
+                  <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.78rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; text-transform: uppercase;">
+                    Digital Career & Coaching
+                  </span>
+                </div>
+
+                <div class="tc uf wf ag jq" style="margin-bottom: 12px; gap: 14px;">
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-man.svg" alt="Publisher" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">IkonTeki Africa</p>
                   </div>
-                  <div class="tc wf ag">
-                    <img src="images/icon-calender.svg" alt="Calender" />
-                    <p>25 Dec, 2025</p>
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-calender.svg" alt="Date" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">18 Jan, 2026</p>
                   </div>
                 </div>
-                <h4 class="ek tj ml il kk wm xl eq lb">
-                  <a href="blog-single.html">9 simple ways to improve your design skills</a>
+
+                <h4 class="ek tj ml il kk wm xl eq lb" style="font-size: 1.12rem; font-weight: 700; line-height: 1.45; margin-bottom: 12px; color: #FFFFFF;">
+                  <a href="blog-digital-career-east-africa.html" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#FFFFFF'">
+                    How to Build a High-Income Digital Career in Tanzania: Skills, Mentorship, and Remote Work
+                  </a>
                 </h4>
+
+                <p style="font-size: 0.90rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                  A step-by-step roadmap for youth, IT students....
+                </p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                  <a href="blog-digital-career-east-africa.html" style="color: #00AEEF; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Read Full Article <span>→</span>
+                  </a>
+                  <span style="font-size: 0.78rem; color: #F5A623; font-weight: 600;">⏱ 7 min read</span>
+                </div>
               </div>
             </div>
 
-            <!-- Blog Item -->
-            <div class="animate_top sg vk rm xm">
-              <div class="c rc i z-1 pg">
-                <img class="w-full" src="images/blog-03.png" alt="Blog" />
+            <!-- Blog Item: Why Every Enterprise Needs a Website for Business Growth: Driving Sales and Client Reach -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #0A0F1D; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+              <div class="c rc i z-1 pg" style="position: relative; overflow: hidden; height: 230px;">
+                <img class="w-full" src="images/website-for-business-growth-sales-conversion.jpg" alt="website for business growth online sales conversion and digital store" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
 
-                <div
-                  class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10"
-                >
-                  <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi"
-                    >Read More</a
-                  >
+                <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+                  <a href="blog-why-business-needs-website.html" class="vc ek rg lk gh sl ml il gi hi" style="padding: 8px 22px; font-weight: 700; border-radius: 6px;">
+                    Read Article
+                  </a>
                 </div>
               </div>
 
-              <div class="yh">
-                <div class="tc uf wf ag jq">
-                  <div class="tc wf ag">
-                    <img src="images/icon-man.svg" alt="User" />
-                    <p>Musharof Chy</p>
+              <div class="yh" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                <div style="margin-bottom: 10px;">
+                  <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.78rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; text-transform: uppercase;">
+                    Web Development
+                  </span>
+                </div>
+
+                <div class="tc uf wf ag jq" style="margin-bottom: 12px; gap: 14px;">
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-man.svg" alt="Publisher" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">IkonTeki Africa</p>
                   </div>
-                  <div class="tc wf ag">
-                    <img src="images/icon-calender.svg" alt="Calender" />
-                    <p>25 Dec, 2025</p>
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-calender.svg" alt="Date" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">24 Jan, 2026</p>
                   </div>
                 </div>
-                <h4 class="ek tj ml il kk wm xl eq lb">
-                  <a href="blog-single.html">Tips to quickly improve your coding speed.</a>
+
+                <h4 class="ek tj ml il kk wm xl eq lb" style="font-size: 1.12rem; font-weight: 700; line-height: 1.45; margin-bottom: 12px; color: #FFFFFF;">
+                  <a href="blog-why-business-needs-website.html" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#FFFFFF'">
+                    Why Every Enterprise Needs a Website for Business Growth: Driving Sales and Client Reach
+                  </a>
                 </h4>
+
+                <p style="font-size: 0.90rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                  Why treating your website as an active....
+                </p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                  <a href="blog-why-business-needs-website.html" style="color: #00AEEF; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Read Full Article <span>→</span>
+                  </a>
+                  <span style="font-size: 0.78rem; color: #F5A623; font-weight: 600;">⏱ 6 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Item: Enterprise Cloud Hosting in Tanzania: NVMe Speed, 99.9% Uptime, and Data Security -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #0A0F1D; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+              <div class="c rc i z-1 pg" style="position: relative; overflow: hidden; height: 230px;">
+                <img class="w-full" src="images/cloud-hosting-in-tanzania-datacenter-server.jpg" alt="cloud hosting in Tanzania secure datacenter and server infrastructure" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+
+                <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+                  <a href="blog-cloud-hosting-tanzania.html" class="vc ek rg lk gh sl ml il gi hi" style="padding: 8px 22px; font-weight: 700; border-radius: 6px;">
+                    Read Article
+                  </a>
+                </div>
+              </div>
+
+              <div class="yh" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                <div style="margin-bottom: 10px;">
+                  <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.78rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; text-transform: uppercase;">
+                    Cloud & DevOps
+                  </span>
+                </div>
+
+                <div class="tc uf wf ag jq" style="margin-bottom: 12px; gap: 14px;">
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-man.svg" alt="Publisher" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">IkonTeki Africa</p>
+                  </div>
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-calender.svg" alt="Date" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">02 Feb, 2026</p>
+                  </div>
+                </div>
+
+                <h4 class="ek tj ml il kk wm xl eq lb" style="font-size: 1.12rem; font-weight: 700; line-height: 1.45; margin-bottom: 12px; color: #FFFFFF;">
+                  <a href="blog-cloud-hosting-tanzania.html" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#FFFFFF'">
+                    Enterprise Cloud Hosting in Tanzania: NVMe Speed, 99.9% Uptime, and Data Security
+                  </a>
+                </h4>
+
+                <p style="font-size: 0.90rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                  Why modern enterprises must upgrade from sluggish....
+                </p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                  <a href="blog-cloud-hosting-tanzania.html" style="color: #00AEEF; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Read Full Article <span>→</span>
+                  </a>
+                  <span style="font-size: 0.78rem; color: #F5A623; font-weight: 600;">⏱ 6 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Item: Safari Booking Software: How Modern Tour Platforms Double Bookings and Streamline Operations -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #0A0F1D; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+              <div class="c rc i z-1 pg" style="position: relative; overflow: hidden; height: 230px;">
+                <img class="w-full" src="images/safari-booking-software-tour-operator-portal.jpg" alt="safari booking software online tour operator portal and dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+
+                <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+                  <a href="blog-safari-tourism-booking-tech.html" class="vc ek rg lk gh sl ml il gi hi" style="padding: 8px 22px; font-weight: 700; border-radius: 6px;">
+                    Read Article
+                  </a>
+                </div>
+              </div>
+
+              <div class="yh" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                <div style="margin-bottom: 10px;">
+                  <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.78rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; text-transform: uppercase;">
+                    Tourism Technology
+                  </span>
+                </div>
+
+                <div class="tc uf wf ag jq" style="margin-bottom: 12px; gap: 14px;">
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-man.svg" alt="Publisher" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">IkonTeki Africa</p>
+                  </div>
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-calender.svg" alt="Date" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">08 Feb, 2026</p>
+                  </div>
+                </div>
+
+                <h4 class="ek tj ml il kk wm xl eq lb" style="font-size: 1.12rem; font-weight: 700; line-height: 1.45; margin-bottom: 12px; color: #FFFFFF;">
+                  <a href="blog-safari-tourism-booking-tech.html" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#FFFFFF'">
+                    Safari Booking Software: How Modern Tour Platforms Double Bookings and Streamline Operations
+                  </a>
+                </h4>
+
+                <p style="font-size: 0.90rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                  How custom tourism tech helps tour operators....
+                </p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                  <a href="blog-safari-tourism-booking-tech.html" style="color: #00AEEF; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Read Full Article <span>→</span>
+                  </a>
+                  <span style="font-size: 0.78rem; color: #F5A623; font-weight: 600;">⏱ 7 min read</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Item: Custom Web Application Development: Automating Workflows and Scaling African SMEs -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; background: #0A0F1D; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+              <div class="c rc i z-1 pg" style="position: relative; overflow: hidden; height: 230px;">
+                <img class="w-full" src="images/custom-web-application-development-dashboard.jpg" alt="custom web application development enterprise analytics dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+
+                <div class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10">
+                  <a href="blog-custom-web-mobile-apps.html" class="vc ek rg lk gh sl ml il gi hi" style="padding: 8px 22px; font-weight: 700; border-radius: 6px;">
+                    Read Article
+                  </a>
+                </div>
+              </div>
+
+              <div class="yh" style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                <div style="margin-bottom: 10px;">
+                  <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.78rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; text-transform: uppercase;">
+                    Software Engineering
+                  </span>
+                </div>
+
+                <div class="tc uf wf ag jq" style="margin-bottom: 12px; gap: 14px;">
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-man.svg" alt="Publisher" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">IkonTeki Africa</p>
+                  </div>
+                  <div class="tc wf ag" style="gap: 6px;">
+                    <img src="images/icon-calender.svg" alt="Date" style="width: 15px; height: 15px;" />
+                    <p style="font-size: 0.82rem; color: #94A3B8; margin: 0;">14 Feb, 2026</p>
+                  </div>
+                </div>
+
+                <h4 class="ek tj ml il kk wm xl eq lb" style="font-size: 1.12rem; font-weight: 700; line-height: 1.45; margin-bottom: 12px; color: #FFFFFF;">
+                  <a href="blog-custom-web-mobile-apps.html" style="color: #FFFFFF; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#FFFFFF'">
+                    Custom Web Application Development: Automating Workflows and Scaling African SMEs
+                  </a>
+                </h4>
+
+                <p style="font-size: 0.90rem; color: #94A3B8; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                  Why off-the-shelf software falls short for unique....
+                </p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                  <a href="blog-custom-web-mobile-apps.html" style="color: #00AEEF; font-weight: 700; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Read Full Article <span>→</span>
+                  </a>
+                  <span style="font-size: 0.78rem; color: #F5A623; font-weight: 600;">⏱ 6 min read</span>
+                </div>
               </div>
             </div>
           </div>
@@ -941,204 +1152,137 @@
       <!-- ===== Contact End ===== -->
 
       <!-- ===== CTA Start ===== -->
-      <section class="i pg ji" style="background-color: #00AEEF !important; padding: 60px 0;">
-  <!-- Bg Shape -->
-  <img class="h p q" src="images/shape-16.svg" alt="Bg Shape" />
-
-  <div class="bb ye i z-10 ki xn dr">
-    <div class="tc uf sn tn un gg">
-      <div class="animate_left to/2">
-        <h2 class="fk vj zp pr lk ac">
-            Ready to Accelerate Your Brand’s Market Growth?
-        </h2>
-        <p class="lk">
-            Partner with IkonTeki Africa today. You Own It — We Brand It.
-        </p>
-      </div>
-      <div class="animate_right bf">
-        <a href="#support" class="vc ek kk rg ol il cm" style="background-color: #0A0F1D; color: #FFFFFF; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px;">Contact Our Engineers</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+      <section class="i pg ji" style="background: #0A0F1D !important; padding: 70px 0 !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;">
+        <div class="bb ye i z-10 ki xn dr">
+          <div style="background: linear-gradient(135deg, rgba(0, 174, 239, 0.14) 0%, rgba(10, 15, 29, 0.98) 100%), #0F172A; border: 1px solid rgba(0, 174, 239, 0.35); border-radius: 20px; padding: 48px 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);">
+            <div class="tc uf sn tn un gg" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 28px;">
+              <div class="animate_left to/2" style="max-width: 650px;">
+                <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF !important; line-height: 1.25; margin: 0 0 12px 0;">
+                  Ready to Accelerate Your Brand’s Market Growth?
+                </h2>
+                <p style="color: #F1F5F9 !important; font-size: 1.15rem; line-height: 1.6; margin: 0; font-weight: 500;">
+                  Partner with IkonTeki Africa today. You Own It, We Brand It.
+                </p>
+              </div>
+              <div class="animate_right bf">
+                <a href="#support" class="btn-solid-cyan" style="background-color: #00AEEF !important; color: #FFFFFF !important; font-size: 1.05rem !important; font-weight: 700 !important; text-decoration: none !important; padding: 15px 36px !important; border-radius: 8px !important; display: inline-flex !important; align-items: center !important; gap: 10px !important; box-shadow: 0 6px 25px rgba(0, 174, 239, 0.45) !important; white-space: nowrap !important; border: none !important;">
+                  <span style="color: #FFFFFF !important; font-weight: 700 !important;">Contact Our Engineers</span>
+                  <span style="color: #FFFFFF !important; font-size: 1.2rem !important; font-weight: 700 !important;">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- ===== CTA End ===== -->
     </main>
     <!-- ===== Footer Start ===== -->
-    <footer>
-  <div class="bb ze ki xn 2xl:ud-px-0">
-    <!-- Footer Top -->
-    <div class="ji gp">
-      <div class="tc uf ap gg fp">
-        <div class="animate_top zd/2 to/4">
-          <a href="index.html" class="tc wf xf sf" style="text-decoration: none;">
-            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
-          </a>
-
-          <p class="lc fb" style="line-height: 1.7;">
-     IkonTeki Africa is a premier technology agency in Njiro, Arusha, engineering high-performance software, cloud systems, digital marketing, and digital coaching.
-   </p>
-
-          <ul class="tc wf cg">
-            <li>
-              <a href="#">
-                <svg class="vh ul cl il" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_48_1499)">
-                    <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1499">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+    <footer style="background-color: #000000 !important; background: #000000 !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important;">
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <!-- Footer Top -->
+        <div class="ji gp" style="padding-top: 60px; padding-bottom: 50px;">
+          <div class="tc uf ap gg fp">
+            <div class="animate_top zd/2 to/4" style="max-width: 340px;">
+              <a href="index.html" class="tc wf xf sf" style="text-decoration: none; display: inline-block; margin-bottom: 16px;">
+                <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
               </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="vh ul cl il" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_48_1502)">
-                    <path
-                      d="M22.162 5.65593C21.3985 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4803 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75098 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.345 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.2641 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.2301 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z"
-                      fill=""
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1502">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="vh ul cl il" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_48_1505)">
-                    <path
-                      d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z"
-                      fill=""
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1505">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="vh ul cl il" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_48_1508)">
-                    <path
-                      d="M7.443 5.3501C8.082 5.3501 8.673 5.4001 9.213 5.5481C9.70301 5.63814 10.1708 5.82293 10.59 6.0921C10.984 6.3391 11.279 6.6861 11.475 7.1311C11.672 7.5761 11.77 8.1211 11.77 8.7141C11.77 9.4071 11.623 10.0001 11.279 10.4451C10.984 10.8911 10.492 11.2861 9.902 11.5831C10.738 11.8311 11.377 12.2761 11.77 12.8691C12.164 13.4631 12.41 14.2051 12.41 15.0461C12.41 15.7391 12.262 16.3321 12.016 16.8271C11.77 17.3221 11.377 17.7671 10.934 18.0641C10.4528 18.3825 9.92084 18.6165 9.361 18.7561C8.771 18.9051 8.181 19.0041 7.591 19.0041H1V5.3501H7.443ZM7.049 10.8901C7.59 10.8901 8.033 10.7421 8.377 10.4951C8.721 10.2481 8.869 9.8021 8.869 9.2581C8.869 8.9611 8.819 8.6641 8.721 8.4671C8.623 8.2691 8.475 8.1201 8.279 7.9721C8.082 7.8731 7.885 7.7741 7.639 7.7251C7.393 7.6751 7.148 7.6751 6.852 7.6751H4V10.8911H7.05L7.049 10.8901ZM7.197 16.7281C7.492 16.7281 7.787 16.6781 8.033 16.6291C8.28138 16.5819 8.51628 16.4805 8.721 16.3321C8.92139 16.1873 9.08903 16.002 9.213 15.7881C9.311 15.5411 9.41 15.2441 9.41 14.8981C9.41 14.2051 9.213 13.7101 8.82 13.3641C8.426 13.0671 7.885 12.9191 7.246 12.9191H4V16.7291H7.197V16.7281ZM16.689 16.6781C17.082 17.0741 17.672 17.2721 18.459 17.2721C19 17.2721 19.492 17.1241 19.885 16.8771C20.279 16.5801 20.525 16.2831 20.623 15.9861H23.033C22.639 17.1731 22.049 18.0141 21.263 18.5581C20.475 19.0531 19.541 19.3501 18.41 19.3501C17.6864 19.3523 16.9688 19.2179 16.295 18.9541C15.6887 18.7266 15.148 18.3529 14.721 17.8661C14.2643 17.4107 13.9267 16.8498 13.738 16.2331C13.492 15.5901 13.393 14.8981 13.393 14.1061C13.393 13.3641 13.492 12.6721 13.738 12.0281C13.9745 11.4082 14.3245 10.8378 14.77 10.3461C15.213 9.9011 15.754 9.5061 16.344 9.2581C17.0007 8.99416 17.7022 8.85969 18.41 8.8621C19.246 8.8621 19.984 9.0111 20.623 9.3571C21.263 9.7031 21.754 10.0991 22.148 10.6931C22.5499 11.2636 22.8494 11.8998 23.033 12.5731C23.131 13.2651 23.18 13.9581 23.131 14.7491H16C16 15.5411 16.295 16.2831 16.689 16.6791V16.6781ZM19.787 11.4841C19.443 11.1381 18.902 10.9401 18.262 10.9401C17.82 10.9401 17.475 11.0391 17.18 11.1871C16.885 11.3361 16.689 11.5341 16.492 11.7321C16.311 11.9234 16.1912 12.1643 16.148 12.4241C16.098 12.6721 16.049 12.8691 16.049 13.0671H20.475C20.377 12.3251 20.131 11.8311 19.787 11.4841V11.4841ZM15.459 6.2901H20.967V7.6261H15.46V6.2901H15.459Z"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_48_1508">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
 
-        <div class="vd ro tc sf rn un gg vn">
-          <div class="animate_top">
-            <h4 class="kk wm tj ec">Quick Links</h4>
+              <p class="lc fb" style="line-height: 1.7; color: #94A3B8; font-size: 0.95rem; margin-bottom: 20px;">
+                IkonTeki Africa is a premier technology agency in Njiro, Arusha, engineering high-performance software, cloud systems, digital marketing, and digital career coaching.
+              </p>
 
-            <ul>
-              <li><a href="#" class="sc xl vb">Home</a></li>
-              <li><a href="#" class="sc xl vb">Product</a></li>
-              <li>
-                <a href="#" class="sc xl vb">
-                  Careers 
-                  <span class="sc ek uj lk nh rg zi _i nc">Hiring</span>
+              <div style="display: flex; gap: 14px; align-items: center;">
+                <a href="https://wa.me/255712286993" target="_blank" rel="noopener" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #00AEEF; text-decoration: none; border: 1px solid rgba(255,255,255,0.1);" title="WhatsApp">
+                  💬
                 </a>
-              </li>
-              <li><a href="#" class="sc xl vb">Pricing</a></li>
-            </ul>
-          </div>
-
-          <div class="animate_top">
-            <h4 class="kk wm tj ec">Services</h4>
-
-            <ul>
-              <li><a href="#" class="sc xl vb">Web Development</a></li>
-              <li><a href="#" class="sc xl vb">Graphics Design</a></li>
-              <li><a href="#" class="sc xl vb">Digital Marketing</a></li>
-              <li><a href="#" class="sc xl vb">Ui/Ux Design</a></li>
-            </ul>
-          </div>
-
-          <div class="animate_top">
-            <h4 class="kk wm tj ec">Support</h4>
-
-            <ul>
-              <li><a href="#" class="sc xl vb">Company</a></li>
-              <li><a href="#" class="sc xl vb">Press media</a></li>
-              <li><a href="#" class="sc xl vb">Our Blog</a></li>
-              <li><a href="#" class="sc xl vb">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <div class="animate_top">
-            <h4 class="kk wm tj ec">Newsletter</h4>
-            <p class="ac qe">Subscribe to receive future updates</p>
-
-            <form action="https://formbold.com/s/unique_form_id" method="POST">
-              <div class="i">
-                <input
-                  type="text"
-                  placeholder="Email address"
-                  class="vd sm _g ch pm vk xm rg gm dm dn gi mi"
-                />
-
-                <button class="h q fi">
-                  <svg class="th vm ul" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_48_1487)">
-                      <path
-                        d="M3.1175 1.17318L18.5025 9.63484C18.5678 9.67081 18.6223 9.72365 18.6602 9.78786C18.6982 9.85206 18.7182 9.92527 18.7182 9.99984C18.7182 10.0744 18.6982 10.1476 18.6602 10.2118C18.6223 10.276 18.5678 10.3289 18.5025 10.3648L3.1175 18.8265C3.05406 18.8614 2.98262 18.8792 2.91023 18.8781C2.83783 18.8769 2.76698 18.857 2.70465 18.8201C2.64232 18.7833 2.59066 18.7308 2.55478 18.6679C2.51889 18.6051 2.50001 18.5339 2.5 18.4615V1.53818C2.50001 1.46577 2.51889 1.39462 2.55478 1.33174C2.59066 1.26885 2.64232 1.2164 2.70465 1.17956C2.76698 1.14272 2.83783 1.12275 2.91023 1.12163C2.98262 1.12051 3.05406 1.13828 3.1175 1.17318ZM4.16667 10.8332V16.3473L15.7083 9.99984L4.16667 3.65234V9.16651H8.33333V10.8332H4.16667Z"
-                        fill=""
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_48_1487">
-                        <rect width="20" height="20" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
+                <a href="tel:+255712286993" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #F5A623; text-decoration: none; border: 1px solid rgba(255,255,255,0.1);" title="Call Us">
+                  📞
+                </a>
+                <a href="mailto:contact@ikonteki.africa" style="width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: #10B981; text-decoration: none; border: 1px solid rgba(255,255,255,0.1);" title="Email Us">
+                  ✉️
+                </a>
               </div>
-            </form>
+            </div>
+
+            <div class="vd ro tc sf rn un gg vn" style="flex-grow: 1;">
+              <div class="animate_top">
+                <h4 class="kk wm tj ec" style="color: #FFFFFF !important; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">Quick Links</h4>
+
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.1;">
+                  <li><a href="index.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Home</a></li>
+                  <li><a href="about.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">About Us</a></li>
+                  <li><a href="services.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Services</a></li>
+                  <li><a href="pricing.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Pricing</a></li>
+                  <li><a href="blog-grid.html" class="sc xl vb" style="color: #00AEEF; font-weight: 700; text-decoration: none;">All 12 Articles</a></li>
+                </ul>
+              </div>
+
+              <div class="animate_top">
+                <h4 class="kk wm tj ec" style="color: #FFFFFF !important; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">Services</h4>
+
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.1;">
+                  <li><a href="services.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Web Development</a></li>
+                  <li><a href="services.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Cloud Hosting</a></li>
+                  <li><a href="services.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Digital Marketing</a></li>
+                  <li><a href="services.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Tourism Platforms</a></li>
+                  <li><a href="services.html" class="sc xl vb" style="color: #94A3B8; text-decoration: none;" onmouseover="this.style.color='#00AEEF'" onmouseout="this.style.color='#94A3B8'">Teki 4 Impakt</a></li>
+                </ul>
+              </div>
+
+              <div class="animate_top">
+                <h4 class="kk wm tj ec" style="color: #FFFFFF !important; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">Direct Contact</h4>
+
+                <div style="color: #94A3B8; font-size: 0.92rem; line-height: 2;">
+                  <p style="margin: 0; color: #CBD5E1;">Njiro, Arusha, Tanzania</p>
+                  <p style="margin: 0;">Phone: <a href="tel:+255712286993" style="color: #F5A623 !important; font-weight: 700; text-decoration: none;">+255 712 286 993</a></p>
+                  <p style="margin: 0;">Email: <a href="mailto:contact@ikonteki.africa" style="color: #00AEEF !important; text-decoration: none;">contact@ikonteki.africa</a></p>
+                  <div style="margin-top: 12px;">
+                    <a href="contact.html" class="btn-solid-cyan" style="padding: 6px 18px; font-size: 0.85rem; font-weight: 700; text-decoration: none; border-radius: 6px; display: inline-block;">Consult With Us</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="animate_top">
+                <h4 class="kk wm tj ec" style="color: #FFFFFF !important; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">Newsletter</h4>
+                <p class="ac qe" style="color: #94A3B8; font-size: 0.92rem; margin-bottom: 12px;">Subscribe for tech trends & insights</p>
+
+                <form action="contact.html" method="GET">
+                  <div class="i" style="display: flex; gap: 8px;">
+                    <input
+                      type="email"
+                      placeholder="Your email address"
+                      required
+                      style="background: #111827; border: 1px solid rgba(255,255,255,0.15); color: #FFFFFF; padding: 10px 14px; border-radius: 6px; font-size: 0.9rem; flex-grow: 1; outline: none;"
+                    />
+                    <button type="submit" style="background: #00AEEF; color: #FFFFFF; font-weight: 700; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">
+                      Join
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Footer Top -->
+        <!-- Footer Top -->
 
-    <!-- Footer Bottom -->
-    <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
-      <div class="animate_top">
-        <ul class="tc wf gg">
-          <li><a href="#" class="xl">English</a></li>
-          <li><a href="#" class="xl">Privacy Policy</a></li>
-          <li><a href="#" class="xl">Support</a></li>
-        </ul>
-      </div>
+        <!-- Footer Bottom -->
+        <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj" style="background-color: #000000 !important; border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 24px 0;">
+          <div class="animate_top">
+            <ul class="tc wf gg" style="gap: 20px; list-style: none; margin: 0; padding: 0;">
+              <li><a href="about.html" style="color: #94A3B8; text-decoration: none; font-size: 0.88rem;">About</a></li>
+              <li><a href="services.html" style="color: #94A3B8; text-decoration: none; font-size: 0.88rem;">Services</a></li>
+              <li><a href="contact.html" style="color: #94A3B8; text-decoration: none; font-size: 0.88rem;">Contact</a></li>
+              <li><a href="blog-grid.html" style="color: #94A3B8; text-decoration: none; font-size: 0.88rem;">Articles</a></li>
+            </ul>
+          </div>
 
-      <div class="animate_top">
-        <p>&copy; 2026 IkonTeki Africa. All rights reserved. The Reason For Your Brand.</p>
+          <div class="animate_top">
+            <p style="color: #64748B; font-size: 0.88rem; margin: 0;">&copy; 2026 IkonTeki Africa. All rights reserved. You Own It, We Brand It.</p>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
       </div>
-    </div>
-    <!-- Footer Bottom -->
-  </div>
-</footer>
-
+    </footer>
     <!-- ===== Footer End ===== -->
 
     <!-- ====== Back To Top Start ===== -->

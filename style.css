@@ -2595,7 +2595,8 @@ header,
 header.g,
 header.hh,
 header._k {
-  background-color: #0A0F1D !important;
+  background-color: #000000 !important;
+  background: #000000 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   position: fixed !important;
   top: 0 !important;
@@ -2621,13 +2622,43 @@ header a.xl:hover {
 @media (max-width: 1024px) {
   header div.d.hh.rm.sr.td.ud.qg.ug.jc.yh,
   header div.sd.qo {
-    background-color: #0A0F1D !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95) !important;
     z-index: 99999 !important;
     padding: 20px !important;
   }
   header div.sd.qo nav ul li a {
+    color: #FFFFFF !important;
+  }
+}
+
+/* 2. Global Footer: ALWAYS SOLID PURE BLACK ON ALL THEMES */
+footer,
+body footer,
+body.b footer {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+footer a,
+footer ul li a {
+  color: #94A3B8 !important;
+  transition: color 0.2s ease !important;
+}
+
+footer a:hover,
+footer ul li a:hover {
+  color: #00AEEF !important;
+}
+
+footer h4,
+footer h5,
+footer h6 {
+  color: #FFFFFF !important;
+}
     color: #FFFFFF !important;
     padding: 10px 0 !important;
     display: block !important;
@@ -2672,75 +2703,48 @@ header a.xl:hover {
   line-height: 1.7 !important;
 }
 
-/* 3. High-Contrast Light Mode (Default) */
-body:not(.b) {
-  background-color: #FFFFFF !important;
-  color: #334155 !important;
-}
-
-body:not(.b) h1,
-body:not(.b) h2,
-body:not(.b) h3,
-body:not(.b) h4,
-body:not(.b) h5,
-body:not(.b) .kk,
-body:not(.b) .wm,
-body:not(.b) .fk {
-  color: #0F172A !important;
-}
-
-body:not(.b) p,
-body:not(.b) span.sc,
-body:not(.b) .hq,
-body:not(.b) .fq,
-body:not(.b) .uo,
-body:not(.b) .ur {
-  color: #475569 !important;
-}
-
-/* Clean White Cards in Light Mode with Subtle Border */
-body:not(.b) .sg,
-body:not(.b) .hh,
-body:not(.b) .project-item > div,
-body:not(.b) .animate_top.kn {
-  background-color: #FFFFFF !important;
-  border: 1px solid #E2E8F0 !important;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
-}
-
-/* Subtle Alternate Section Backgrounds in Light Mode */
-body:not(.b) section.lj,
-body:not(.b) section.qh,
-body:not(.b) section.hj {
-  background-color: #F8FAFC !important;
-}
-
-/* 4. Dark Mode Styling */
+/* 3. Permanent Dark Mode - The One and Only Style */
+html,
+body,
 body.b {
   background-color: #0A0F1D !important;
   color: #94A3B8 !important;
 }
 
-body.b h1,
-body.b h2,
-body.b h3,
-body.b h4,
-body.b h5,
-body.b .kk,
-body.b .wm,
-body.b .fk {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .kk,
+body .wm,
+body .fk {
   color: #FFFFFF !important;
 }
 
-body.b p {
+body p,
+body span.sc,
+body .hq,
+body .fq,
+body .uo,
+body .ur {
   color: #94A3B8 !important;
 }
 
-body.b .sg,
-body.b .project-item > div,
-body.b .animate_top.kn {
+body .sg,
+body .hh,
+body .project-item > div,
+body .animate_top.kn {
   background-color: #121829 !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+body section.lj,
+body section.qh,
+body section.hj {
+  background-color: #0A0F1D !important;
 }
 
 /* 5. Solid Brand Colors (Strictly No Gradients) */

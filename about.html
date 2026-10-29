@@ -28,79 +28,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet">
   </head>
-  <body
-    x-data="{ page: 'about', 'darkMode': false, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+  <body class="b eh"
+    x-data="{ page: 'about', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
     x-init="
-         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : false;
+         darkMode = localStorage.getItem('darkMode') !== null ? JSON.parse(localStorage.getItem('darkMode')) : true;
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
     :class="{'b eh': darkMode === true}"
     style="font-family: 'Plus Jakarta Sans', sans-serif;"
   >
     
     <!-- ===== Header Start ===== -->
-    <header
-      class="g s r vd ya cj"
-      :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
-      @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
-      style="background-color: #0A0F1D !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 99999 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;"
-    >
-      <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
-        <div class="vd to/4 tc wf yf">
-          <a href="index.html" class="tc wf xf sf" style="text-decoration: none;">
-            <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" class="brand-logo-img" />
-          </a>
-
-          <!-- Hamburger Toggle BTN -->
-          <button class="po rc" @click="navigationOpen = !navigationOpen" aria-label="Toggle Navigation">
-            <span class="rc i pf re pd">
-              <span class="du-block h q vd yc">
-                <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
-                <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
-                <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
-              </span>
-              <span class="du-block h q vd yc lf">
-                <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
-                <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
-              </span>
-            </span>
-          </button>
-        </div>
-
-        <div
-          class="vd wo/4 sd qo f ho oo wf yf"
-          :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
-        >
-          <nav>
-            <ul class="tc _o sf yo cg ep">
-              <li><a href="index.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Home</a></li>
-              <li><a href="services.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Services</a></li>
-              <li><a href="about.html" class="xl" style="color: #00AEEF !important; font-weight: 600;">About Us</a></li>
-              <li><a href="portfolio.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Portfolio</a></li>
-              <li><a href="contact.html" class="xl" style="color: #FFFFFF !important; font-weight: 600;">Contact</a></li>
-            </ul>
-          </nav>
-
-          <div class="tc wf ig pb no" style="gap: 16px; align-items: center;">
-            <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
-              <label class="rc ab i" title="Toggle Light/Dark Theme" style="cursor: pointer;">
-                <input type="checkbox" :checked="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
-                <svg :class="{ 'wn' : !darkMode, 'xh' : darkMode }" class="th om" width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill="#F5A623"/>
-                </svg>
-                <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
-              </label>
-            </div>
-
-            <a href="tel:+255712286993" style="color: #F5A623 !important; font-weight: 700; text-decoration: none; font-size: 0.92rem; display: flex; align-items: center; gap: 6px;">
-              <i class="fa-solid fa-phone"></i> +255 712 286 993
-            </a>
-            <a href="https://wa.me/255712286993?text=Hello%20IkonTeki%20Africa%2C%20I%20would%20like%20to%20consult%20on%20digital%20services" target="_blank" rel="noopener noreferrer" class="btn-solid-cyan" style="padding: 8px 18px; font-size: 0.88rem; text-decoration: none;">
-              <i class="fa-brands fa-whatsapp"></i> Consult Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+    <!-- ===== Header End ===== -->
     <!-- ===== Header End ===== -->
     <main>
       
@@ -128,7 +68,7 @@
             You Own It. <span style="color: #00AEEF;">We Brand It.</span>
           </h2>
           <p style="color: #475569; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
-            At IkonTeki Africa, we believe that modern African enterprises deserve software and digital presence built to world-class standards. We don't believe in generic templates or cut-and-paste code — we engineer tailor-made digital engines that grant your brand an enduring market advantage.
+            At IkonTeki Africa, we believe that modern African enterprises deserve software and digital presence built to world-class standards. We don't believe in generic templates or cut-and-paste code. We engineer tailor-made digital engines that grant your brand an enduring market advantage.
           </p>
           <p style="color: #475569; font-size: 1rem; line-height: 1.8; margin-bottom: 28px;">
             From high-converting tourism booking engines in Arusha to multi-vendor marketplaces and community coding workshops, our work is defined by speed, uptime reliability, and measurable client ROI.
@@ -182,7 +122,7 @@
     </main>
     
     <!-- ===== Footer Start ===== -->
-    <footer style="background-color: #070B14 !important; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 60px;">
+    <footer style="background-color: #000000 !important; background: #000000 !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 60px;">
       <div class="bb ze ki xn 2xl:ud-px-0">
         <div class="ji gp" style="padding-bottom: 40px;">
           <div class="tc uf ap gg fp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
@@ -214,7 +154,7 @@
                 <li><a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Home</a></li>
                 <li><a href="services.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Services</a></li>
                 <li><a href="about.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">About Us</a></li>
-                <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Portfolio</a></li>
+                <li><a href="pricing.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Pricing</a></li>
                 <li><a href="contact.html" style="color: #94a3b8; text-decoration: none; font-size: 0.92rem;">Contact</a></li>
               </ul>
             </div>

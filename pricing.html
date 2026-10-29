@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing & Service Packages | IkonTeki Africa</title>
+    <meta name="description" content="Transparent, predictable pricing for custom software, web applications, NVMe cloud hosting, tourism booking systems, and digital marketing in Tanzania." />
+    <meta name="keywords" content="IkonTeki pricing, software development cost Tanzania, cloud hosting prices, web design rates Arusha, tech agency pricing" />
+    <link rel="canonical" href="https://ikonteki.africa/pricing.html" />
+    <link rel="icon" href="favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body
+    class="b eh"
+    x-data="{ page: 'pricing', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false, billPlan: 'monthly' }"
+    :class="{'b eh': darkMode === true}"
+  >
+    <!-- ===== Global Header Start ===== -->
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+    <!-- ===== Global Header End ===== -->
+
+    <main style="padding-top: 110px;">
+      <!-- ===== Pricing Hero Header Start ===== -->
+      <section class="ji gp uq" style="padding-bottom: 30px;">
+        <div class="bb ze ki xn vq" style="text-align: center; max-width: 820px; margin: 0 auto 30px auto;">
+          <span style="display: inline-block; background: rgba(0, 174, 239, 0.12); color: #00AEEF; font-size: 0.85rem; font-weight: 700; padding: 4px 16px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px;">
+            Clear & Predictable Investment
+          </span>
+          <h1 class="fk vj pr kk wm" style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; color: #FFFFFF; line-height: 1.25; margin-bottom: 16px;">
+            Services & Transparent Pricing Plans
+          </h1>
+          <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.7; margin: 0 auto;">
+            Choose the ideal solution engineered to match your business ambition and commercial scale. No hidden surcharges, transparent milestones, and guaranteed deliverables.
+          </p>
+
+          <!-- Plan Switcher: Monthly / Annual -->
+          <div style="display: inline-flex; align-items: center; gap: 14px; background: #121829; border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 18px; border-radius: 50px; margin-top: 28px;">
+            <span :style="billPlan === 'monthly' ? 'color: #00AEEF; font-weight: 700;' : 'color: #94A3B8; font-weight: 500;'" style="font-size: 0.95rem; cursor: pointer;" @click="billPlan = 'monthly'">
+              Monthly Billing
+            </span>
+            <button 
+              type="button" 
+              @click="billPlan = (billPlan === 'monthly') ? 'annually' : 'monthly'"
+              style="width: 50px; height: 26px; border-radius: 13px; background: #00AEEF; position: relative; border: none; cursor: pointer; padding: 2px;"
+              aria-label="Toggle Billing Frequency"
+            >
+              <div 
+                style="width: 22px; height: 22px; border-radius: 50%; background: #FFFFFF; transition: transform 0.25s ease;"
+                :style="billPlan === 'annually' ? 'transform: translateX(24px);' : 'transform: translateX(0);'"
+              ></div>
+            </button>
+            <span :style="billPlan === 'annually' ? 'color: #00AEEF; font-weight: 700;' : 'color: #94A3B8; font-weight: 500;'" style="font-size: 0.95rem; cursor: pointer;" @click="billPlan = 'annually'">
+              Annual Billing <span style="font-size: 0.78rem; background: rgba(245, 166, 35, 0.2); color: #F5A623; padding: 2px 8px; border-radius: 50px; font-weight: 700;">Save 20%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 3 Core Engagement Packages Grid -->
+        <div class="bb ye ki xn vq jb jo">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            
+            <!-- Tier 1: Brand Launch -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 18px; padding: 36px 30px; background: #0F172A; border: 1px solid rgba(255, 255, 255, 0.08); display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="font-size: 0.82rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px;">Tier 01</span>
+                <h3 style="font-size: 1.5rem; font-weight: 800; color: #FFFFFF; margin: 6px 0 12px 0;">Brand Launch</h3>
+                <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+                  Ideal for emerging businesses, safari operators, and growing brands requiring professional market presence.
+                </p>
+
+                <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div style="display: flex; align-items: baseline; gap: 6px;">
+                    <span style="font-size: 2.6rem; font-weight: 800; color: #FFFFFF;" x-text="billPlan === 'monthly' ? '$299' : '$2,390'">$299</span>
+                    <span style="color: #94A3B8; font-size: 0.92rem;" x-text="billPlan === 'monthly' ? '/ month' : '/ year'">/ month</span>
+                  </div>
+                  <span style="font-size: 0.8rem; color: #10B981; font-weight: 600;">Full ownership upon deployment</span>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; line-height: 2.2; color: #CBD5E1; font-size: 0.95rem;">
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Custom Responsive Website & Mobile UI
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> 5 Corporate Domain Emails (@yourbrand.co.tz)
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> 1 Year High-Speed NVMe Cloud Hosting
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Essential Local SEO & Google Maps Setup
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Direct WhatsApp Lead Routing Button
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Free SSL Security Certificate
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="contact.html" style="display: block; text-align: center; background: rgba(255, 255, 255, 0.08); color: #FFFFFF; font-weight: 700; padding: 13px 24px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.15);" onmouseover="this.style.background='#00AEEF'; this.style.borderColor='#00AEEF';" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.15)';">
+                  Select Brand Launch
+                </a>
+              </div>
+            </div>
+
+            <!-- Tier 2: Growth & Automation (Featured) -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 18px; padding: 36px 30px; background: linear-gradient(135deg, rgba(0, 174, 239, 0.15) 0%, rgba(15, 23, 42, 0.98) 100%), #0F172A; border: 2px solid #00AEEF; box-shadow: 0 10px 40px rgba(0, 174, 239, 0.25); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+              
+              <div style="position: absolute; top: -14px; right: 28px; background: #00AEEF; color: #FFFFFF; font-size: 0.78rem; font-weight: 800; padding: 4px 14px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px;">
+                Most Popular
+              </div>
+
+              <div>
+                <span style="font-size: 0.82rem; font-weight: 700; color: #00AEEF; text-transform: uppercase; letter-spacing: 0.5px;">Tier 02</span>
+                <h3 style="font-size: 1.5rem; font-weight: 800; color: #FFFFFF; margin: 6px 0 12px 0;">Growth & Automation</h3>
+                <p style="color: #CBD5E1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+                  For expanding enterprises wanting automated client workflows, online payments, and customer acquisition.
+                </p>
+
+                <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+                  <div style="display: flex; align-items: baseline; gap: 6px;">
+                    <span style="font-size: 2.6rem; font-weight: 800; color: #FFFFFF;" x-text="billPlan === 'monthly' ? '$599' : '$4,790'">$599</span>
+                    <span style="color: #94A3B8; font-size: 0.92rem;" x-text="billPlan === 'monthly' ? '/ month' : '/ year'">/ month</span>
+                  </div>
+                  <span style="font-size: 0.8rem; color: #10B981; font-weight: 600;">Complete automation architecture</span>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; line-height: 2.2; color: #FFFFFF; font-size: 0.95rem;">
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Custom Web Application & Client Portal
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Mobile Money (M-Pesa, Airtel) & Card Checkout
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Automated Invoicing & PDF Document Engine
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Automated Daily Cloud Snapshots & Backups
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Targeted Google Ads & Meta Campaign Strategy
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Priority 24/7 Technical WhatsApp Hotline
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="contact.html" class="btn-solid-cyan" style="display: block; text-align: center; padding: 14px 24px; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 174, 239, 0.4);">
+                  Choose Growth & Automation
+                </a>
+              </div>
+            </div>
+
+            <!-- Tier 3: Enterprise Ecosystem -->
+            <div class="animate_top sg vk rm xm" style="border-radius: 18px; padding: 36px 30px; background: #0F172A; border: 1px solid rgba(255, 255, 255, 0.08); display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="font-size: 0.82rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px;">Tier 03</span>
+                <h3 style="font-size: 1.5rem; font-weight: 800; color: #FFFFFF; margin: 6px 0 12px 0;">Enterprise Ecosystem</h3>
+                <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+                  Full-scale digital transformation with dedicated cloud clusters, custom APIs, and ongoing engineering.
+                </p>
+
+                <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                  <div style="display: flex; align-items: baseline; gap: 6px;">
+                    <span style="font-size: 2.6rem; font-weight: 800; color: #FFFFFF;" x-text="billPlan === 'monthly' ? '$1,299' : '$10,390'">$1,299</span>
+                    <span style="color: #94A3B8; font-size: 0.92rem;" x-text="billPlan === 'monthly' ? '/ month' : '/ year'">/ month</span>
+                  </div>
+                  <span style="font-size: 0.8rem; color: #10B981; font-weight: 600;">Dedicated engineering squad</span>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; line-height: 2.2; color: #CBD5E1; font-size: 0.95rem;">
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Full Custom Multi-Platform Software Stack
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Dedicated Cloud Server Cluster with 99.99% SLA
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Multi-Branch ERP & Inventory Integration
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Monthly Enterprise SEO & Content Campaigns
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> On-Site Team Coaching & Technical Workshops
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #00AEEF; font-weight: 800;">✓</span> Dedicated Lead Engineer & CTO Advisory
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a href="contact.html" style="display: block; text-align: center; background: rgba(255, 255, 255, 0.08); color: #FFFFFF; font-weight: 700; padding: 13px 24px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.15);" onmouseover="this.style.background='#00AEEF'; this.style.borderColor='#00AEEF';" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.15)';">
+                  Request Enterprise Proposal
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ===== Pricing Hero Header End ===== -->
+
+      <!-- ===== Individual Service Rates Section Start ===== -->
+      <section style="padding: 60px 0; background: #060913; border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06);">
+        <div class="bb ze ki xn 2xl:ud-px-0">
+          <div style="text-align: center; max-width: 720px; margin: 0 auto 50px auto;">
+            <span style="color: #F5A623; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.06em;">
+              A LA CARTE SERVICE RATES
+            </span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin: 8px 0 14px 0;">
+              Individual Service Pricing Menu
+            </h2>
+            <p style="color: #94A3B8; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+              Need a standalone project or specialized service? Explore our competitive transparent rates below.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            
+            <!-- Service 1: Custom Web App -->
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px;">
+              <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">💻</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Custom Web Development</h4>
+              <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 16px; line-height: 1.5;">Modern responsive websites, custom web applications, client portals, and booking platforms.</p>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #00AEEF; margin-bottom: 12px;">From $399 <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">/ project</span></div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #CBD5E1; line-height: 1.8;">
+                <li>✓ Responsive Mobile-First Design</li>
+                <li>✓ SEO Optimization Built-in</li>
+                <li>✓ WhatsApp & Lead Forms</li>
+              </ul>
+            </div>
+
+            <!-- Service 2: Cloud Hosting -->
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px;">
+              <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">☁️</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">NVMe Cloud Hosting</h4>
+              <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 16px; line-height: 1.5;">Ultra-fast solid state hosting with corporate domain mailboxes and automated daily backups.</p>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #00AEEF; margin-bottom: 12px;">From $15 <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">/ month</span></div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #CBD5E1; line-height: 1.8;">
+                <li>✓ 99.9% Uptime Guarantee</li>
+                <li>✓ Automated Off-Site Backups</li>
+                <li>✓ Anti-Spam Protected Mail</li>
+              </ul>
+            </div>
+
+            <!-- Service 3: Safari Booking Software -->
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px;">
+              <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">🦁</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">Safari & Tourism Tech</h4>
+              <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 16px; line-height: 1.5;">Tailor-made tour operator software with real-time itinerary builders and international payment gateways.</p>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #00AEEF; margin-bottom: 12px;">From $699 <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">/ setup</span></div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #CBD5E1; line-height: 1.8;">
+                <li>✓ Interactive Day-by-Day Itineraries</li>
+                <li>✓ Card & M-Pesa Multi-Currency</li>
+                <li>✓ Lodge Inventory Management</li>
+              </ul>
+            </div>
+
+            <!-- Service 4: SEO & Performance Ads -->
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 26px;">
+              <span style="font-size: 1.5rem; display: block; margin-bottom: 10px;">📈</span>
+              <h4 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 6px 0;">SEO & Digital Marketing</h4>
+              <p style="font-size: 0.88rem; color: #94A3B8; margin-bottom: 16px; line-height: 1.5;">Targeted Google rankings, Google Maps optimization, and high-conversion Meta advertising campaigns.</p>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #00AEEF; margin-bottom: 12px;">From $199 <span style="font-size: 0.8rem; color: #64748B; font-weight: 500;">/ month</span></div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #CBD5E1; line-height: 1.8;">
+                <li>✓ Google Maps 3-Pack Rankings</li>
+                <li>✓ High-Intent Keyword Targeting</li>
+                <li>✓ Bi-Weekly Conversion Reports</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ===== Individual Service Rates Section End ===== -->
+
+      <!-- ===== Pricing FAQ Section Start ===== -->
+      <section style="padding: 70px 0;">
+        <div class="bb ze ki xn 2xl:ud-px-0" style="max-width: 900px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: 45px;">
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF; margin-bottom: 12px;">
+              Frequently Asked Questions About Pricing
+            </h2>
+            <p style="color: #94A3B8; font-size: 1.05rem; margin: 0;">
+              Everything you need to know about our payment structures, delivery guarantees, and project timelines.
+            </p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px;">
+              <h4 style="color: #FFFFFF; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">What payment methods do you accept?</h4>
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                We accept M-Pesa, Airtel Money, Tigo Pesa, local and international bank wire transfers, and major credit cards (Visa, Mastercard) in both Tanzanian Shillings (TZS) and US Dollars (USD).
+              </p>
+            </div>
+
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px;">
+              <h4 style="color: #FFFFFF; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">How are project payments structured?</h4>
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                Standard development projects require a 50 percent initial deposit to launch engineering sprints, with the remaining 50 percent balance due only upon final client demonstration, milestone approval, and live deployment.
+              </p>
+            </div>
+
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px;">
+              <h4 style="color: #FFFFFF; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">Do I own the source code and digital assets?</h4>
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                Yes, completely. Our core philosophy is "You Own It, We Brand It." Upon final payment, 100 percent of the intellectual property, source code, server credentials, and domain ownership are handed over to your organization.
+              </p>
+            </div>
+
+            <div style="background: #0F172A; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px;">
+              <h4 style="color: #FFFFFF; font-size: 1.1rem; font-weight: 700; margin: 0 0 8px 0;">Do you offer ongoing technical maintenance?</h4>
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                All new deployments include 30 days of complimentary post-launch technical support and staff training. Following that, clients can opt into monthly managed IT and cloud maintenance packages starting from $49 per month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Pricing FAQ Section End ===== -->
+
+      <!-- ===== CTA Banner Start ===== -->
+      <section class="i pg ji" style="background: #0A0F1D !important; padding: 70px 0 !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important;">
+        <div class="bb ye i z-10 ki xn dr">
+          <div style="background: linear-gradient(135deg, rgba(0, 174, 239, 0.14) 0%, rgba(10, 15, 29, 0.98) 100%), #0F172A; border: 1px solid rgba(0, 174, 239, 0.35); border-radius: 20px; padding: 48px 40px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);">
+            <div class="tc uf sn tn un gg" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 28px;">
+              <div class="animate_left to/2" style="max-width: 650px;">
+                <h2 style="font-size: 2.2rem; font-weight: 800; color: #FFFFFF !important; line-height: 1.25; margin: 0 0 12px 0;">
+                  Need a Bespoke Solution or Custom Scope?
+                </h2>
+                <p style="color: #F1F5F9 !important; font-size: 1.15rem; line-height: 1.6; margin: 0; font-weight: 500;">
+                  Speak directly with our technical director in Arusha to review your exact software, cloud, or marketing requirements.
+                </p>
+              </div>
+              <div class="animate_right bf">
+                <a href="contact.html" class="btn-solid-cyan" style="background-color: #00AEEF !important; color: #FFFFFF !important; font-size: 1.05rem !important; font-weight: 700 !important; text-decoration: none !important; padding: 15px 36px !important; border-radius: 8px !important; display: inline-flex !important; align-items: center !important; gap: 10px !important; box-shadow: 0 6px 25px rgba(0, 174, 239, 0.45) !important; white-space: nowrap !important;">
+                  <span style="color: #FFFFFF !important; font-weight: 700 !important;">Request Custom Quote</span>
+                  <span style="color: #FFFFFF !important; font-size: 1.2rem; font-weight: 700 !important;">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== CTA Banner End ===== -->
+    </main>
+
+    <!-- ===== Global Footer Start ===== -->
+    <footer style="background-color: #000000 !important; background: #000000 !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; padding: 50px 0 30px 0;">
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; margin-bottom: 40px;">
+          <div style="flex: 1 1 300px;">
+            <a href="index.html" style="display: inline-block; margin-bottom: 16px;">
+              <img src="images/ikonteki-africa-logo.png" alt="IkonTeki Africa" style="max-height: 48px;" />
+            </a>
+            <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.7; max-width: 360px;">
+              IkonTeki Africa is a premier technology agency in Njiro, Arusha, engineering high-performance software, cloud systems, digital marketing, and practical IT coaching.
+            </p>
+          </div>
+          <div style="flex: 1 1 180px;">
+            <h5 style="color: #FFFFFF; font-weight: 700; margin-bottom: 14px;">Quick Links</h5>
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+              <li><a href="index.html" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+              <li><a href="services.html" style="color: #94A3B8; text-decoration: none;">Services</a></li>
+              <li><a href="about.html" style="color: #94A3B8; text-decoration: none;">About Us</a></li>
+              <li><a href="pricing.html" style="color: #00AEEF; font-weight: 700; text-decoration: none;">Pricing</a></li>
+              <li><a href="teki-4-impakt.html" style="color: #94A3B8; text-decoration: none;">Teki 4 Impakt</a></li>
+              <li><a href="contact.html" style="color: #94A3B8; text-decoration: none;">Contact</a></li>
+            </ul>
+          </div>
+          <div style="flex: 1 1 240px;">
+            <h5 style="color: #FFFFFF; font-weight: 700; margin-bottom: 14px;">Contact Us</h5>
+            <p style="color: #94A3B8; font-size: 0.92rem; line-height: 1.8; margin: 0;">
+              Njiro, Arusha, Tanzania<br />
+              Phone: <a href="tel:+255712286993" style="color: #F5A623; text-decoration: none; font-weight: 700;">+255 712 286 993</a><br />
+              Email: contact@ikonteki.africa
+            </p>
+          </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; color: #64748B; font-size: 0.85rem;">
+          <p>© 2026 IkonTeki Africa. All Rights Reserved. You Own It, We Brand It.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ===== Global Footer End ===== -->
+
+    <script defer src="bundle.js"></script>
+  </body>
+</html>
